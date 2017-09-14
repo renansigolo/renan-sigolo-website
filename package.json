@@ -1,0 +1,23 @@
+{
+  "name": "renan_sigolo",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "Renan Sigolo <renan.sigolo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sitemap": "^4.2.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-guetzli": "^1.0.0",
+    "imagemin-pngquant": "^5.0.1"
+  }
+}
