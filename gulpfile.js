@@ -106,7 +106,7 @@ gulp.task('sitemap', function () {
             read: false
         })
         .pipe(sitemap({
-            siteUrl: 'https://www.INSERT YOUR WEBSITE ADDRESS HERE.com.br'
+            siteUrl: 'https://www.renansigolo.com.br'
         }))
         .pipe(gulp.dest('dist'));
 });
