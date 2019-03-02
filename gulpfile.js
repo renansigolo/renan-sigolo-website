@@ -143,7 +143,6 @@ gulp.task('copy', ['scss', 'js', 'jsLibs'], function () {
 
 
 //GULP TASKS
-
 //Watch task
 gulp.task('watch', function () {
     gulp.watch('src/assets/_pre/sass/**/*.scss', ['scss']);
