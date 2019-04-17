@@ -6,6 +6,16 @@ My Personal Website.
 
 Run `npm run build` to build the project.
 
+### Deploying to production
+
+To deploy a new version to production run one of the following commands
+
+```
+npm version patch
+npm version minor
+npm version major
+```
+
 ## Built With
 
 * Web Technologies

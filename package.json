@@ -5,10 +5,10 @@
     "author": "Renan Sigolo <renan.sigolo@gmail.com>",
     "license": "MIT",
     "scripts": {
+        "postversion": "npm run deploy",
         "build": "gulp",
         "start": "gulp watch",
-        "deploy": "gulp && firebase deploy",
-        "update": "yarn upgrade-interactive --latest"
+        "deploy": "gulp && firebase deploy"
     },
     "dependencies": {
         "del": "^3.0.0",
