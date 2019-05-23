@@ -18,15 +18,15 @@ npm version major
 
 ## Built With
 
-* Web Technologies
+- Web Technologies
 
 ## Dev tools
 
-* [Gulp](https://gulpjs.com/) - Automate and enhance your workflow
+- [Gulp](https://gulpjs.com/) - Automate and enhance your workflow
 
 ## Authors
 
-* [Renan Sigolo](https://github.com/renansigolo)
+- [Renan Sigolo](https://github.com/renansigolo)
 
 ## License
 
@@ -34,4 +34,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-* Inspiring the world to be more collaborative.
+- Inspiring the world to be more collaborative.

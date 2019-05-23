@@ -1,6 +1,6 @@
-@import "../libs/vars";
-@import "../libs/functions";
-@import "../libs/mixins";
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
 
 /* Form */
 
@@ -23,13 +23,13 @@ label {
   margin: 0 0 (_size(element-margin) * 0.5) 0;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
 select,
 textarea {
-  @include vendor("appearance", "none");
+  @include vendor('appearance', 'none');
 
   border-radius: _size(border-radius);
   border: solid 1px _palette(border);
@@ -50,7 +50,7 @@ textarea {
 }
 
 .select-wrapper {
-  @include icon("");
+  @include icon('');
 
   display: block;
   position: relative;
@@ -73,9 +73,9 @@ textarea {
   }
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
 select {
   height: _size(element-height);
 }
@@ -84,9 +84,9 @@ textarea {
   padding: 0.75em 1em;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  @include vendor("appearance", "none");
+input[type='checkbox'],
+input[type='radio'] {
+  @include vendor('appearance', 'none');
 
   display: block;
   float: left;
@@ -137,7 +137,7 @@ input[type="radio"] {
   }
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   & + label {
     &::before {
       border-radius: _size(border-radius);
@@ -145,7 +145,7 @@ input[type="checkbox"] {
   }
 }
 
-input[type="radio"] {
+input[type='radio'] {
   & + label {
     &::before {
       border-radius: 100%;

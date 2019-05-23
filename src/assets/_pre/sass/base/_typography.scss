@@ -1,6 +1,6 @@
-@import "../libs/vars";
-@import "../libs/functions";
-@import "../libs/mixins";
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
 
 /* Type */
 
@@ -20,7 +20,6 @@ textarea {
     font-size: 11pt;
   }
 
-
   @include breakpoint(xsmall) {
     font-size: 10pt;
     line-height: 1.75;
@@ -28,13 +27,25 @@ textarea {
 }
 
 a {
-  @include vendor("transition", ("color #{_duration(transition)} ease", "border-color #{_duration(transition)} ease"));
+  @include vendor(
+    'transition',
+    (
+      'color #{_duration(transition)} ease',
+      'border-color #{_duration(transition)} ease'
+    )
+  );
 
   color: inherit;
   text-decoration: none;
 
   &::before {
-    @include vendor("transition", ("color #{_duration(transition)} ease", "text-shadow #{_duration(transition)} ease"));
+    @include vendor(
+      'transition',
+      (
+        'color #{_duration(transition)} ease',
+        'text-shadow #{_duration(transition)} ease'
+      )
+    );
   }
 
   &:hover {
@@ -103,7 +114,6 @@ h6 {
     font-size: 1.65em;
   }
 }
-
 
 sub {
   font-size: 0.8em;
