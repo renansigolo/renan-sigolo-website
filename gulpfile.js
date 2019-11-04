@@ -27,7 +27,6 @@ const scss = () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(
       autoprefixer({
-        browsers: ['defaults'],
         cascade: false
       })
     )

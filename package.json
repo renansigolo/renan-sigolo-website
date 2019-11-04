@@ -15,27 +15,27 @@
     "prettier": "prettier --config ./.prettierrc.json --write \"./**/*.{js,json,md,scss,html}\""
   },
   "devDependencies": {
-    "browser-sync": "^2.26.5",
-    "del": "^4.1.1",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-imagemin": "^6.1.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sitemap": "^6.2.0",
+    "gulp-sitemap": "^7.6.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-guetzli": "^2.0.0",
-    "imagemin-pngquant": "^7.0.0",
-    "prettier": "^1.17.1"
+    "imagemin-pngquant": "^8.0.0",
+    "prettier": "^1.18.2"
   },
   "browserslist": [
     "defaults"
   ],
   "engines": {
-    "node": "~10.15.0",
+    "node": ">=10.15.0",
     "npm": ">= 6.5.0",
     "yarn": "NO LONGER USED - Please use npm"
   }
