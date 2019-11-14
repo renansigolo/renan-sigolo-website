@@ -2,15 +2,25 @@
 
 My Personal Website.
 
-## Build
+## Build the project for
 
-Run `npm run build` to build the project.
+- Development
+
+```bash
+npm run build
+``` 
+
+- Production
+
+```bash
+npm run build:prod
+``` 
 
 ### Deploying to production
 
 To deploy a new version to production run one of the following commands
 
-```
+```bash
 npm version patch
 npm version minor
 npm version major
