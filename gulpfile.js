@@ -4,36 +4,58 @@
 
 const { series, parallel, watch, src, dest } = require('gulp')
 const browserSync = require('browser-sync').create()
-
-const sass = require('gulp-sass')
-const cssnano = require('gulp-cssnano')
 const autoprefixer = require('gulp-autoprefixer')
-const rename = require('gulp-rename')
-const uglify = require('gulp-uglify')
 const concat = require('gulp-concat')
-
+const cssnano = require('cssnano')
 const del = require('del')
 const htmlmin = require('gulp-htmlmin')
-const sitemap = require('gulp-sitemap')
 const imagemin = require('gulp-imagemin')
-const imageminPngquant = require('imagemin-pngquant')
 const imageminGuetzli = require('imagemin-guetzli')
+const imageminPngquant = require('imagemin-pngquant')
+const postcss = require('gulp-postcss')
+const rename = require('gulp-rename')
+const sass = require('gulp-sass')
+const sitemap = require('gulp-sitemap')
+const uglify = require('gulp-uglify')
 
 /**************** Functions ****************/
 
+// Check Node Env
+let isDev = process.env.NODE_ENV === 'development' ? true : false
+
+/**
+ * Paths to project folders
+ */
+
+const paths = {
+  input: 'src/',
+  output: 'dist/',
+  assets: 'src/assets',
+  website: 'https://renansigolo.com',
+  styles: {
+    input: 'src/styles',
+    output: 'dist/css/'
+  }
+}
+
 // Watch SCSS files -> sourcemap, autroprefixer, minify with cssnano, rename .css to .min.css
 const scss = () => {
-  return src('src/assets/_pre/sass/main.scss', { sourcemaps: true })
+  return src(`${paths.styles.input}/main.scss`, { sourcemaps: isDev })
     .pipe(sass().on('error', sass.logError))
     .pipe(
       autoprefixer({
-        cascade: false
+        cascade: false,
+        remove: true
       })
     )
     .pipe(
-      cssnano({
-        zindex: false
-      })
+      postcss([
+        cssnano({
+          discardComments: {
+            removeAll: true
+          }
+        })
+      ])
     )
     .pipe(
       rename(function(path) {
@@ -43,13 +65,13 @@ const scss = () => {
         }
       })
     )
-    .pipe(dest('src/assets/css/', { sourcemaps: true }))
+    .pipe(dest(paths.assets, { sourcemaps: isDev }))
     .pipe(browserSync.stream())
 }
 
 // Watch JS files -> sourcemap, minifiy with uglify, concat
 const js = () => {
-  return src('src/assets/_pre/js/*.js', { sourcemaps: true })
+  return src('src/scripts/js/**/*.js', { sourcemaps: isDev })
     .pipe(uglify())
     .pipe(concat('scripts.js'))
     .pipe(
@@ -59,15 +81,15 @@ const js = () => {
         }
       })
     )
-    .pipe(dest('src/assets/js/', { sourcemaps: true }))
+    .pipe(dest(paths.assets, { sourcemaps: isDev }))
     .pipe(browserSync.stream())
 }
 
 // Concat Minified JS libraries
 const jsLibs = () => {
   const libPaths = [
-    'src/assets/libs/html5shiv.min.js',
-    'src/assets/libs/respond.min.js'
+    'src/scripts/libs/html5shiv.min.js',
+    'src/scripts/libs/respond.min.js'
   ]
 
   return src(libPaths)
@@ -79,12 +101,12 @@ const jsLibs = () => {
         }
       })
     )
-    .pipe(dest('src/assets/js/'))
+    .pipe(dest(paths.assets))
 }
 
 // Delete all files in the dist folder
 const clean = () => {
-  del.sync(['dist/**/*'])
+  del.sync([`${paths.output}/**/*`, `${paths.assets}/**/*`])
   return Promise.resolve()
 }
 
@@ -96,7 +118,7 @@ const minifyHtml = () => {
         collapseWhitespace: true
       })
     )
-    .pipe(dest('dist'))
+    .pipe(dest(paths.output))
 }
 
 // Create sitemap.xml
@@ -106,10 +128,10 @@ const generateSitemap = () => {
   })
     .pipe(
       sitemap({
-        siteUrl: 'https://renansigolo.com'
+        siteUrl: paths.website
       })
     )
-    .pipe(dest('dist'))
+    .pipe(dest(paths.output))
 }
 
 // Optimize Images - GIF, SVG and ICO
@@ -123,41 +145,43 @@ const optimizeGif = () => {
         })
       ])
     )
-    .pipe(dest('dist/'))
+    .pipe(dest(paths.output))
 }
 
 // Optimize Images - PNG
 const optimizePng = () => {
   return src('src/**/*.png')
     .pipe(imagemin([imageminPngquant()]))
-    .pipe(dest('dist/'))
+    .pipe(dest(paths.output))
 }
 
 // Optimize Images - JPG ang JPEG
 const optimizeJpg = () => {
   return src('src/**/*.{jpg,jpeg}')
     .pipe(imagemin([imageminGuetzli()]))
-    .pipe(dest('dist/'))
+    .pipe(dest(paths.output))
 }
 
 // Copy remaining files to dist
 const copy = () => {
   return src([
     'src/**/*.{xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map,pdf}',
-    '!src/assets/_pre/**/*'
-  ]).pipe(dest('dist/'))
+    '!src/js/**/*',
+    `!${paths.styles.input}/**/*`
+  ]).pipe(dest(paths.output))
 }
 
 // Watch
 const watchFiles = () => {
   watch('src/**/*.html').on('change', browserSync.reload)
-  watch('src/assets/_pre/sass/**/*.scss', scss)
-  watch('src/assets/_pre/js/**/*.js', js)
-  watch('node_modules/**/*', jsLibs)
+  watch('src/images/**/*').on('change', browserSync.reload)
+  watch(`${paths.styles.input}/**/*.scss`, scss)
+  watch('src/js/**/*.js', js)
+  // watch('node_modules/**/*', jsLibs)
 }
 
 // Serve
-const serve = () => {
+const startServer = () => {
   browserSync.init({
     server: {
       baseDir: './src/'
@@ -167,15 +191,9 @@ const serve = () => {
   watchFiles()
 }
 
-/**************** Gulp Commands ****************/
+/**************** Gulp Tasks ****************/
 
-// Start
-exports.start = serve
-
-// Build
-exports.build = parallel(scss, js, jsLibs)
-
-// Build Production
+// Build Production files
 exports.default = series(
   clean,
   parallel(
@@ -190,3 +208,6 @@ exports.default = series(
     copy
   )
 )
+
+// Start Dev Environment
+exports.watch = series(exports.default, startServer)

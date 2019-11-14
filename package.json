@@ -3,37 +3,49 @@
   "version": "1.3.1",
   "main": "index.html",
   "author": "Renan Sigolo <renan.sigolo@gmail.com>",
+  "keywords": [
+    "gulp",
+    "gulp 4",
+    "gulp boilerplate",
+    "boilerplate"
+  ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renansigolo/renan-sigolo/issues"
+  },
+  "homepage": "https://github.com/renansigolo/renan-sigolo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renansigolo/renan-sigolo.git"
+  },
   "scripts": {
-    "preinstall": "npm run clean",
     "postversion": "npm run deploy",
     "clean": "rm -rf package-lock.json node_modules dist",
-    "build": "gulp build",
-    "build:prod": "gulp",
-    "start": "gulp start",
-    "deploy": "gulp && firebase deploy",
-    "prettier": "prettier --config ./.prettierrc.json --write \"./**/*.{js,json,md,scss,html}\""
+    "clean:install": "npm run clean && npm i",
+    "build": "NODE_ENV=development gulp",
+    "build:prod": "NODE_ENV=production gulp",
+    "start": "NODE_ENV=development gulp watch",
+    "deploy": "npm run build:prod && firebase deploy",
+    "prettier": "prettier --config ./.prettierrc.json --write '**/*.{html,scss,js,json,yml,md}'"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.3",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^6.1.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sitemap": "^7.6.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-guetzli": "^2.0.0",
     "imagemin-pngquant": "^8.0.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   },
-  "browserslist": [
-    "defaults"
-  ],
   "engines": {
     "node": ">=10.15.0",
     "npm": ">= 6.5.0",
