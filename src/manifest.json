@@ -1,6 +1,11 @@
 {
   "name": "Renan Sigolo",
   "short_name": "Renan Sigolo",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
   "start_url": "/",
   "icons": [
     {
@@ -54,8 +59,5 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "orientation": "portrait",
-  "display": "standalone"
+  "splash_pages": null
 }
