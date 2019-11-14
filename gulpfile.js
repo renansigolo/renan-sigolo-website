@@ -165,7 +165,7 @@ const optimizeJpg = () => {
 // Copy remaining files to dist
 const copy = () => {
   return src([
-    'src/**/*.{xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map,pdf}',
+    'src/**/*.{xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map,pdf,webmanifest}',
     '!src/js/**/*',
     `!${paths.styles.input}/**/*`
   ]).pipe(dest(paths.output))
