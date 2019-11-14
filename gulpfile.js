@@ -166,7 +166,7 @@ const optimizeJpg = () => {
 const copy = () => {
   return src([
     'src/**/*.{xml,txt,eot,ttf,woff,woff2,otf,ttf,php,css,js,json,map,pdf,webmanifest}',
-    '!src/js/**/*',
+    '!src/scripts/**/*',
     `!${paths.styles.input}/**/*`
   ]).pipe(dest(paths.output))
 }
@@ -177,7 +177,7 @@ const watchFiles = () => {
   watch('src/images/**/*').on('change', browserSync.reload)
   watch(`${paths.styles.input}/**/*.scss`, scss)
   watch('src/js/**/*.js', js)
-  // watch('node_modules/**/*', jsLibs)
+  watch('node_modules/**/*', jsLibs)
 }
 
 // Serve
@@ -204,9 +204,9 @@ exports.default = series(
     generateSitemap,
     optimizeGif,
     optimizePng,
-    optimizeJpg,
-    copy
-  )
+    optimizeJpg
+  ),
+  copy
 )
 
 // Start Dev Environment
