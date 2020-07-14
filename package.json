@@ -50,5 +50,8 @@
     "node": ">=10.15.0",
     "npm": ">= 6.5.0",
     "yarn": "NO LONGER USED - Please use npm"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

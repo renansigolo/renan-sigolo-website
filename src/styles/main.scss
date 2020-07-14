@@ -13,14 +13,14 @@
     medium: '(max-width: 960px)',
     small: '(max-width: 736px)',
     xsmall: '(max-width: 480px)',
-    xxsmall: '(max-width: 360px)'
+    xxsmall: '(max-width: 360px)',
   )
 );
 
 @include skel-layout(
   (
     reset: 'full',
-    boxModel: 'border'
+    boxModel: 'border',
   )
 );
 
@@ -48,20 +48,23 @@
   }
 }
 
-// Base.
+// Normalize
+@import '../../node_modules/normalize.css/normalize';
 
+// Skeleton
+// @import 'libs/skeleton';
+
+// Base.
 @import 'base/page';
 @import 'base/typography';
 
 // Component.
-
 @import 'components/form';
 @import 'components/icon';
 @import 'components/list';
 @import 'components/button';
 
 // Layout.
-
 @import 'layout/main';
 @import 'layout/footer';
 @import 'layout/wrapper';
