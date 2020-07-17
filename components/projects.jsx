@@ -55,6 +55,7 @@ export default function Projects() {
               src={`/images/projects/${card.title
                 .toLowerCase()
                 .replace(/\s+/g, '')}.png`}
+              loading="lazy"
               alt={`${card.title} Preview Image`}
             />
             {/* <div className={style.cardContent}>
