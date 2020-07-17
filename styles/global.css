@@ -1,3 +1,23 @@
+:root {
+  --primary: #ff7496;
+  --light: #efefef;
+  --muted: #9c9c9e;
+  --bg-color: #2c2e33;
+
+  background-color: var(--bg-color);
+  color: var(--light);
+}
+
+.section {
+  padding: 4rem 0 0;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
