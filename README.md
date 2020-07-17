@@ -1,47 +1,30 @@
-# Renan Sigolo
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-My Personal Website.
+## Getting Started
 
-## Build the project for
-
-- Development
+First, run the development server:
 
 ```bash
-npm run build
-``` 
-
-- Production
-
-```bash
-npm run build:prod
-``` 
-
-### Deploying to production
-
-To deploy a new version to production run one of the following commands
-
-```bash
-npm version patch
-npm version minor
-npm version major
+npm run dev
+# or
+yarn dev
 ```
 
-## Built With
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Web Technologies
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Dev tools
+## Learn More
 
-- [Gulp](https://gulpjs.com/) - Automate and enhance your workflow
+To learn more about Next.js, take a look at the following resources:
 
-## Authors
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- [Renan Sigolo](https://github.com/renansigolo)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## License
+## Deploy on Vercel
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Acknowledgments
-
-- Inspiring the world to be more collaborative.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
