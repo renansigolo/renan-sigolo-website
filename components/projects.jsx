@@ -40,27 +40,30 @@ const allCardsData = [
 
 export default function Projects() {
   return (
-    <div className={style.grid}>
-      {allCardsData.map((card, index) => (
-        <a
-          href={card.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={style.card}
-          key={index}
-        >
-          <img
-            src={`/images/projects/${card.title
-              .toLowerCase()
-              .replace(/\s+/g, '')}.png`}
-            alt={`${card.title} Preview Image`}
-          />
-          <div className={style.cardContent}>
-            <h3>{card.title}</h3>
-            <p>{card.subtitle}</p>
-          </div>
-        </a>
-      ))}
-    </div>
+    <section className="section">
+      <h2>My Projects</h2>
+      <div className={style.grid}>
+        {allCardsData.map((card, index) => (
+          <a
+            href={card.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.card}
+            key={index}
+          >
+            <img
+              src={`/images/projects/${card.title
+                .toLowerCase()
+                .replace(/\s+/g, '')}.png`}
+              alt={`${card.title} Preview Image`}
+            />
+            {/* <div className={style.cardContent}>
+              <h3>{card.title}</h3>
+              <p>{card.subtitle}</p>
+            </div> */}
+          </a>
+        ))}
+      </div>
+    </section>
   )
 }
