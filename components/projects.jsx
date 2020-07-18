@@ -50,6 +50,7 @@ export default function Projects() {
             rel="noopener noreferrer"
             className={style.card}
             key={index}
+            aria-label={card.subtitle}
           >
             <img
               src={`/images/projects/${card.title
