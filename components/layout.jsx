@@ -57,9 +57,13 @@ export default function Layout({ children }) {
   return (
     <div>
       <Head>
-        <title>{siteTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta charset="utf-8" />
         <meta name="description" content={siteTitle} />
+        <meta name="theme-color" content="#ff7496" />
+        <meta name="apple-mobile-web-app-title" content="Renan Sigolo" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta
           property="og:image"
           content={`https://og-image.now.sh/${encodeURI(
@@ -68,10 +72,12 @@ export default function Layout({ children }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, width=device-width, shrink-to-fit=no"
-        />
+
+        <title>{siteTitle}</title>
+
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
       </Head>
 
       {/* <header className={style.header}>Header</header> */}
