@@ -32,6 +32,11 @@ const allCardsData = [
     url: 'https://livedesign.com.br',
   },
   {
+    title: 'LEAD',
+    subtitle: 'Kent Leaderboard',
+    url: 'https://lead.kent.edu.au',
+  },
+  {
     title: 'My ADHD',
     subtitle: 'My ADHD Website and Mobile App',
     url: 'https://myadhd.app',
