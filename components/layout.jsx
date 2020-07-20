@@ -68,6 +68,10 @@ export default function Layout({ children }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width, shrink-to-fit=no"
+        />
       </Head>
 
       {/* <header className={style.header}>Header</header> */}
