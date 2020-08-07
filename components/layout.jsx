@@ -8,6 +8,7 @@ import {
   faInstagram,
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons'
+import ReactGA from 'react-ga'
 
 const name = 'Renan Sigolo'
 export const siteTitle = 'Renan Sigolo Website'
@@ -54,6 +55,8 @@ export function SocialMedia() {
 }
 
 export default function Layout({ children }) {
+  ReactGA.initialize('UA-82193310-2')
+
   return (
     <div>
       <Head>
