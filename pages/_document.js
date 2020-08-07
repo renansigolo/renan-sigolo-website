@@ -9,7 +9,25 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" dir="ltr">
-        <Head />
+        <Head>
+          {/* Global site tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-82193310-2"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-82193310-2');
+              `,
+            }}
+          />
+        </Head>
+
         <body>
           <Main />
           <NextScript />
