@@ -56,7 +56,6 @@ export function SocialMedia() {
 
 export default function Layout({ children }) {
   ReactGA.initialize('UA-82193310-2')
-  ReactGA.pageview(window.location.pathname + window.location.search)
 
   return (
     <div>
