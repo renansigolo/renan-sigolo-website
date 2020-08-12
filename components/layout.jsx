@@ -9,8 +9,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons'
 
-const name = 'Renan Sigolo'
-export const siteTitle = 'Renan Sigolo Website'
+const siteTitle = 'Renan Sigolo Website'
 
 export function SocialMedia() {
   const allSocialMediaData = [
