@@ -9,8 +9,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons'
 
-const name = 'Renan Sigolo'
-export const siteTitle = 'Renan Sigolo Website'
+const siteTitle = 'Renan Sigolo Website'
 
 export function SocialMedia() {
   const allSocialMediaData = [
@@ -57,7 +56,7 @@ export default function Layout({ children }) {
   return (
     <div>
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="description" content={siteTitle} />
         <meta name="theme-color" content="#ff7496" />
         <meta name="apple-mobile-web-app-title" content="Renan Sigolo" />
