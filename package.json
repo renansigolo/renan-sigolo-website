@@ -20,7 +20,7 @@
     "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "tailwindcss": "^1.7.6"
+    "tailwindcss": "^1.8.6"
   },
   "devDependencies": {
     "lqip-loader": "^2.2.0",
