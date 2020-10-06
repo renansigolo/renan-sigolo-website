@@ -8,9 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.31",
-    "@fortawesome/free-brands-svg-icons": "^5.15.0",
-    "@fortawesome/free-solid-svg-icons": "^5.15.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@zeit/next-source-maps": "0.0.3",
     "next": "9.5.3",
@@ -20,7 +20,7 @@
     "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^1.8.11"
   },
   "devDependencies": {
     "lqip-loader": "^2.2.1",
