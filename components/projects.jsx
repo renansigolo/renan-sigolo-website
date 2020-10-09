@@ -41,6 +41,11 @@ const allCardsData = [
     subtitle: 'Kent Leaderboard',
     url: 'https://lead.kent.edu.au',
   },
+  {
+    title: 'AVet Health',
+    subtitle: 'AVet Health Website',
+    url: 'https://avet.health',
+  },
 ]
 
 export default function Projects() {
@@ -64,10 +69,6 @@ export default function Projects() {
               loading="lazy"
               alt={`${card.title} Preview Image`}
             />
-            {/* <div className={style.cardContent}>
-              <h3>{card.title}</h3>
-              <p>{card.subtitle}</p>
-            </div> */}
           </a>
         ))}
       </div>
