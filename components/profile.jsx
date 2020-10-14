@@ -4,8 +4,8 @@ export default function Profile() {
   return (
     <div className="section-profile">
       <img src="/images/profile.jpg" className="rounded-full w-32" alt={name} />
-      <h1 className="text-5xl">{name}</h1>
-      <p className="text-2xl">Software Engineer</p>
+      <h1 className="text-5xl my-2">{name}</h1>
+      <p className="text-2xl font-light">Software Engineer</p>
       <style jsx>{`
         .section-profile {
           display: flex;
