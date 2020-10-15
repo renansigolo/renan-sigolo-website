@@ -44,7 +44,7 @@ export function SocialMedia() {
       {allSocialMediaData.map((social, index) => (
         <li key={index}>
           <a href={social.url} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={social.icon} size="lg" listItem />
+            <FontAwesomeIcon icon={social.icon} size="lg" />
           </a>
         </li>
       ))}
