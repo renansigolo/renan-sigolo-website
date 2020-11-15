@@ -40,12 +40,7 @@ const allCardsData = [
     title: 'LEAD',
     subtitle: 'Kent Leaderboard',
     url: 'https://lead.kent.edu.au',
-  },
-  {
-    title: 'AVet Health',
-    subtitle: 'AVet Health Website',
-    url: 'https://avet.health',
-  },
+  }
 ]
 
 export default function Projects() {
