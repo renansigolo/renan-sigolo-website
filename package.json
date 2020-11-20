@@ -13,7 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.12",
     "@zeit/next-source-maps": "0.0.3",
-    "next": "^10.0.1",
+    "next": "^10.0.2",
     "next-optimized-images": "^2.6.2",
     "next-pwa": "^3.1.5",
     "postcss-flexbugs-fixes": "^5.0.1",

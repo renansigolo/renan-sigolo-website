@@ -1,4 +1,5 @@
 import style from './projects.module.css'
+import Image from 'next/image'
 
 const allCardsData = [
   {
@@ -40,7 +41,7 @@ const allCardsData = [
     title: 'LEAD',
     subtitle: 'Kent Leaderboard',
     url: 'https://lead.kent.edu.au',
-  }
+  },
 ]
 
 export default function Projects() {
@@ -57,11 +58,12 @@ export default function Projects() {
             key={index}
             aria-label={card.subtitle}
           >
-            <img
+            <Image
               src={`/images/projects/${card.title
                 .toLowerCase()
                 .replace(/\s+/g, '')}.png`}
-              loading="lazy"
+              width={360}
+              height={225}
               alt={`${card.title} Preview Image`}
             />
           </a>
