@@ -79,9 +79,7 @@ export default function Layout({ children }) {
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
       </Head>
 
-      {/* <header className={style.header}>Header</header> */}
-
-      <main className={style.main}>{children}</main>
+      <main className="container mb-12 max-w-screen-md">{children}</main>
 
       <footer className={style.social}>
         <SocialMedia></SocialMedia>

@@ -1,4 +1,3 @@
-import style from './projects.module.css'
 import Image from 'next/image'
 
 const allCardsData = [
@@ -46,15 +45,15 @@ const allCardsData = [
 
 export default function Projects() {
   return (
-    <section className="section">
-      <h2>My Projects</h2>
-      <div className={style.grid}>
+    <section>
+      <h2 className="text-3xl text-center font-medium mb-8">My Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
         {allCardsData.map((card, index) => (
           <a
             href={card.url}
+            className="w-auto transition transform hover:scale-105"
             target="_blank"
             rel="noopener noreferrer"
-            className={style.card}
             key={index}
             aria-label={card.subtitle}
           >
@@ -62,8 +61,9 @@ export default function Projects() {
               src={`/images/projects/${card.title
                 .toLowerCase()
                 .replace(/\s+/g, '')}.png`}
-              width={360}
-              height={225}
+              width="360"
+              height="225"
+              className="rounded"
               alt={`${card.title} Preview Image`}
             />
           </a>
