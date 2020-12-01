@@ -1,6 +1,5 @@
 .social {
-  @apply min-w-full flex flex-col place-content-center h-20;
-  border-top: 1px solid var(--muted);
+  @apply min-w-full flex flex-col place-content-center h-20 border-t-2 border-gray-500;
 }
 
 .social ul {
@@ -8,11 +7,9 @@
 }
 
 .social ul li {
-  @apply w-4 mx-2;
-  color: var(--muted);
+  @apply w-4 mx-2 text-gray-500;
 }
 
 .social ul li:hover {
-  @apply transform hover:scale-110;
-  color: var(--primary);
+  @apply transform hover:scale-110 text-pink-400;
 }

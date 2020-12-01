@@ -3,11 +3,5 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --primary: #ff7496;
-  --light: #efefef;
-  --muted: #9c9c9e;
-  --bg-color: #2c2e33;
-
-  background-color: var(--bg-color);
-  color: var(--light);
+  @apply text-gray-100 bg-gray-800;
 }
