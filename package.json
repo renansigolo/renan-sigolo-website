@@ -1,6 +1,6 @@
 {
   "name": "renan-sigolo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
