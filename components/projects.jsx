@@ -7,6 +7,11 @@ const allCardsData = [
     url: 'https://shop.canturi.com',
   },
   {
+    title: 'TanAndCheek',
+    subtitle: 'Tan+Cheek Website',
+    url: 'https://tanandcheek.com',
+  },
+  {
     title: 'Healthy Kids',
     subtitle: 'Healthy Kids Website',
     url: 'https://healthykids.nsw.gov.au',
