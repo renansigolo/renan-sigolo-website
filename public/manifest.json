@@ -1,12 +1,14 @@
 {
   "name": "Renan Sigolo Website",
   "short_name": "Renan Sigolo",
+  "description": "Renan Sigolo Personal Portfolio",
   "theme_color": "#ff7496",
   "background_color": "#2c2e33",
   "display": "minimal-ui",
   "orientation": "portrait",
   "Scope": "/",
   "start_url": "/",
+  "splash_pages": null,
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
@@ -54,6 +56,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "splash_pages": null
+  ]
 }

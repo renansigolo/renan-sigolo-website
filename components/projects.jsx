@@ -2,49 +2,54 @@ import Image from 'next/image'
 
 const allCardsData = [
   {
-    title: 'Canturi',
-    subtitle: 'Canturi Website',
-    url: 'https://shop.canturi.com',
-  },
-  {
-    title: 'TanAndCheek',
-    subtitle: 'Tan+Cheek Website',
-    url: 'https://tanandcheek.com',
+    title: 'Healthy Bones Australia',
+    subtitle: 'Healthy Bones Australia Website',
+    url: 'healthybonesaustralia.org.au/',
   },
   {
     title: 'Healthy Kids',
     subtitle: 'Healthy Kids Website',
-    url: 'https://healthykids.nsw.gov.au',
+    url: 'healthykids.nsw.gov.au',
   },
   {
     title: 'The Constellation Project',
     subtitle: 'The Constellation Project Website',
-    url: 'https://theconstellationproject.com.au/',
+    url: 'theconstellationproject.com.au/',
   },
   {
     title: 'Your Right To Know',
     subtitle: 'Your Right To Know Website',
-    url: 'https://yourrighttoknow.com.au',
+    url: 'yourrighttoknow.com.au',
+  },
+  {
+    title: 'Canturi',
+    subtitle: 'Canturi Website',
+    url: 'shop.canturi.com',
+  },
+  {
+    title: 'TanAndCheek',
+    subtitle: 'Tan+Cheek Website',
+    url: 'tanandcheek.com',
   },
   {
     title: 'Linde',
     subtitle: 'Linde Material Handling Website',
-    url: 'https://lindemh.com.au',
+    url: 'lindemh.com.au',
   },
   {
     title: 'My ADHD',
     subtitle: 'My ADHD Website and Mobile App',
-    url: 'https://myadhd.app',
+    url: 'myadhd.app',
   },
   {
     title: 'Live Design',
     subtitle: 'Live Design Website',
-    url: 'https://livedesign.com.br',
+    url: 'livedesign.com.br',
   },
   {
     title: 'LEAD',
     subtitle: 'Kent Leaderboard',
-    url: 'https://lead.kent.edu.au',
+    url: 'lead.kent.edu.au',
   },
 ]
 
@@ -55,7 +60,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
         {allCardsData.map((card, index) => (
           <a
-            href={card.url}
+            href={`https://${card.url}`}
             className="w-auto transition transform hover:scale-105"
             target="_blank"
             rel="noopener noreferrer"
