@@ -65,7 +65,7 @@ export default function Projects() {
             <Image
               src={`/images/projects/${card.title
                 .toLowerCase()
-                .replace(/\s+/g, '')}.png`}
+                .replace(/\s+/g, '')}.webp`}
               width={360}
               height={225}
               className="rounded"
