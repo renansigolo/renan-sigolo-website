@@ -2,17 +2,9 @@
 
 // Sourcemaps
 module.exports = {
-  future: {
-    webpack5: true,
-  },
-  productionBrowserSourceMaps: true
+  productionBrowserSourceMaps: true,
+  i18n: {
+    locales: ['en-US'],
+    defaultLocale: 'en-US'
+  }
 }
-
-// PWA
-const withPWA = require('next-pwa')
-module.exports = withPWA({
-  pwa: {
-    disable: process.env.NODE_ENV === 'development',
-    dest: 'public',
-  },
-})

@@ -1,0 +1,11 @@
+.section {
+  @apply text-center my-32;
+}
+
+.avatar {
+  @apply rounded-full w-32 h-32 flex items-center justify-center;
+}
+
+.title {
+  @apply text-4xl my-2 tracking-wide sm:text-5xl sm:tracking-tight lg:text-6xl;
+}

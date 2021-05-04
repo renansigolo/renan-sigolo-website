@@ -66,8 +66,8 @@ export default function Projects() {
               src={`/images/projects/${card.title
                 .toLowerCase()
                 .replace(/\s+/g, '')}.png`}
-              width="360"
-              height="225"
+              width={360}
+              height={225}
               className="rounded"
               alt={`${card.title} Preview Image`}
             />
