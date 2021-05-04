@@ -1,12 +1,12 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: [
-    './pages/**/*.jsx',
-    './pages/**/*.js',
-    './components/**/*.jsx',
-    './components/**/*.js',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
+  darkMode: false,
   theme: {
     container: {
       center: true,
@@ -22,8 +22,14 @@ module.exports = {
       gray: colors.gray,
       pink: colors.pink,
     },
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
+  variants: {
     extend: {},
   },
-  variants: {},
   plugins: [],
 }
