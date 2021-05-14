@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import style from './layout.module.css'
+import style from '../styles/layout.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTwitter,

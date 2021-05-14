@@ -21,12 +21,7 @@ module.exports = {
     colors: {
       gray: colors.gray,
       pink: colors.pink,
-    },
-    extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
-    },
+    }
   },
   variants: {
     extend: {},
