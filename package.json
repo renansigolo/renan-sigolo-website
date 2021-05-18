@@ -6,6 +6,9 @@
     "postversion": "git push",
     "clean": "rm -rf package-lock.json .next node_modules",
     "clean:install": "npm run clean && npm i",
+    "cypress:open": "cypress open",
+    "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
+    "cypress:run": "cypress run",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
+    "cypress": "^7.3.0",
     "postcss": "^8.2.15",
     "tailwindcss": "^2.1.2"
   }

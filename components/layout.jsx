@@ -40,7 +40,7 @@ export function SocialMedia() {
     },
   ]
   return (
-    <ul>
+    <ul data-cy="social-media-list">
       {allSocialMediaData.map((social, index) => (
         <li key={index}>
           <a href={social.url} target="_blank" rel="noopener noreferrer">

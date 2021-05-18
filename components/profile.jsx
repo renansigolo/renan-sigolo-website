@@ -5,7 +5,7 @@ const name = 'Renan Sigolo'
 
 export default function Profile() {
   return (
-    <div className={style.section}>
+    <div className={style.section} data-cy="section-profile">
       <Image
         src="/images/profile.webp"
         className={style.avatar}
