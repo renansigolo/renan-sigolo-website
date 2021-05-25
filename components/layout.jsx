@@ -39,8 +39,9 @@ export function SocialMedia() {
       url: 'https://facebook.com/renansigoloferreira',
     },
   ]
+
   return (
-    <ul data-cy="social-media-list">
+    <ul data-test="social-media-list">
       {allSocialMediaData.map((social, index) => (
         <li key={index}>
           <a href={social.url} target="_blank" rel="noopener noreferrer">
