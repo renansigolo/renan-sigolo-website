@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import style from '../styles/profile.module.css'
+import Image from "next/image";
+import style from "../styles/profile.module.css";
 
-const name = 'Renan Sigolo'
+const name = "Renan Sigolo";
 
 export default function Profile() {
   return (
@@ -16,5 +16,5 @@ export default function Profile() {
       <h1 className={style.title}>{name}</h1>
       <p className="text-xl font-light">Software Engineer</p>
     </div>
-  )
+  );
 }
