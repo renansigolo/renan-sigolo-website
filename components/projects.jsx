@@ -1,57 +1,57 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 const allCardsData = [
   {
-    title: 'Healthy Bones Australia',
-    subtitle: 'Healthy Bones Australia Website',
-    url: 'healthybonesaustralia.org.au/',
+    title: "Healthy Bones Australia",
+    subtitle: "Healthy Bones Australia Website",
+    url: "healthybonesaustralia.org.au/",
   },
   {
-    title: 'Healthy Kids',
-    subtitle: 'Healthy Kids Website',
-    url: 'healthykids.nsw.gov.au',
+    title: "Healthy Kids",
+    subtitle: "Healthy Kids Website",
+    url: "healthykids.nsw.gov.au",
   },
   {
-    title: 'The Constellation Project',
-    subtitle: 'The Constellation Project Website',
-    url: 'theconstellationproject.com.au/',
+    title: "The Constellation Project",
+    subtitle: "The Constellation Project Website",
+    url: "theconstellationproject.com.au/",
   },
   {
-    title: 'Your Right To Know',
-    subtitle: 'Your Right To Know Website',
-    url: 'yourrighttoknow.com.au',
+    title: "Your Right To Know",
+    subtitle: "Your Right To Know Website",
+    url: "yourrighttoknow.com.au",
   },
   {
-    title: 'Canturi',
-    subtitle: 'Canturi Website',
-    url: 'shop.canturi.com',
+    title: "Canturi",
+    subtitle: "Canturi Website",
+    url: "shop.canturi.com",
   },
   {
-    title: 'TanAndCheek',
-    subtitle: 'Tan+Cheek Website',
-    url: 'tanandcheek.com',
+    title: "TanAndCheek",
+    subtitle: "Tan+Cheek Website",
+    url: "tanandcheek.com",
   },
   {
-    title: 'Linde',
-    subtitle: 'Linde Material Handling Website',
-    url: 'lindemh.com.au',
+    title: "Linde",
+    subtitle: "Linde Material Handling Website",
+    url: "lindemh.com.au",
   },
   {
-    title: 'My ADHD',
-    subtitle: 'My ADHD Website and Mobile App',
-    url: 'myadhd.app',
+    title: "My ADHD",
+    subtitle: "My ADHD Website and Mobile App",
+    url: "myadhd.app",
   },
   {
-    title: 'Live Design',
-    subtitle: 'Live Design Website',
-    url: 'livedesign.com.br',
+    title: "Live Design",
+    subtitle: "Live Design Website",
+    url: "livedesign.com.br",
   },
   {
-    title: 'LEAD',
-    subtitle: 'Kent Leaderboard',
-    url: 'lead.kent.edu.au',
+    title: "LEAD",
+    subtitle: "Kent Leaderboard",
+    url: "lead.kent.edu.au",
   },
-]
+];
 
 export default function Projects() {
   return (
@@ -70,7 +70,7 @@ export default function Projects() {
             <Image
               src={`/images/projects/${card.title
                 .toLowerCase()
-                .replace(/\s+/g, '')}.webp`}
+                .replace(/\s+/g, "")}.webp`}
               width={360}
               height={225}
               className="rounded"
@@ -80,5 +80,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  )
+  );
 }

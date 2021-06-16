@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import style from '../styles/profile.module.css'
+import Image from "next/image";
+import style from "../styles/profile.module.css";
 
-const name = 'Renan Sigolo'
+const name = "Renan Sigolo";
 
 export default function Profile() {
   return (
-    <div className={style.section}>
+    <div className={style.section} data-test="section-profile">
       <Image
         src="/images/profile.webp"
         className={style.avatar}
@@ -16,5 +16,5 @@ export default function Profile() {
       <h1 className={style.title}>{name}</h1>
       <p className="text-xl font-light">Software Engineer</p>
     </div>
-  )
+  );
 }

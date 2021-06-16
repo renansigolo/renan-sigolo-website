@@ -1,6 +1,6 @@
-import Layout from '../components/layout'
-import Profile from '../components/profile'
-import Projects from '../components/projects'
+import Layout from "../components/layout";
+import Profile from "../components/profile";
+import Projects from "../components/projects";
 
 export default function Home() {
   return (
@@ -8,5 +8,5 @@ export default function Home() {
       <Profile></Profile>
       <Projects></Projects>
     </Layout>
-  )
+  );
 }

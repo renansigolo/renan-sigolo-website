@@ -3,12 +3,18 @@
   "version": "0.2.3",
   "private": true,
   "scripts": {
-    "postversion": "git push",
-    "clean": "rm -rf package-lock.json .next node_modules",
-    "clean:install": "npm run clean && npm i",
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "clean:install": "npm run clean && npm i",
+    "clean": "rm -rf package-lock.json .next node_modules",
+    "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "dev": "next dev",
+    "format": "prettier '**/*' --write --ignore-unknown",
+    "lint": "next lint",
+    "postversion": "git push",
+    "start": "next start",
+    "test": "npm run build && concurrently -k npm:start npm:cypress:run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -17,13 +23,18 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@headlessui/react": "^1.2.0",
     "@heroicons/react": "^1.0.1",
-    "next": "^10.2.0",
+    "next": "^11.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.15",
-    "tailwindcss": "^2.1.2"
+    "autoprefixer": "^10.2.6",
+    "concurrently": "^6.2.0",
+    "cypress": "^7.5.0",
+    "eslint": "^7.28.0",
+    "eslint-config-next": "^11.0.0",
+    "postcss": "^8.3.4",
+    "prettier": "^2.3.1",
+    "tailwindcss": "^2.1.4"
   }
 }

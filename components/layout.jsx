@@ -1,46 +1,47 @@
-import Head from 'next/head'
-import style from '../styles/layout.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Head from "next/head";
+import style from "../styles/layout.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
   faGithub,
   faLinkedinIn,
   faInstagram,
   faFacebook,
-} from '@fortawesome/free-brands-svg-icons'
+} from "@fortawesome/free-brands-svg-icons";
 
-const siteTitle = 'Renan Sigolo Website'
+const siteTitle = "Renan Sigolo Website";
 
 export function SocialMedia() {
   const allSocialMediaData = [
     {
       icon: faTwitter,
-      title: 'Twitter',
-      url: 'https://twitter.com/renan_sigolo',
+      title: "Twitter",
+      url: "https://twitter.com/renan_sigolo",
     },
     {
       icon: faGithub,
-      title: 'GitHub',
-      url: 'https://github.com/renansigolo',
+      title: "GitHub",
+      url: "https://github.com/renansigolo",
     },
     {
       icon: faLinkedinIn,
-      title: 'LinkedIn',
-      url: 'https://linkedin.com/in/renansigolo',
+      title: "LinkedIn",
+      url: "https://linkedin.com/in/renansigolo",
     },
     {
       icon: faInstagram,
-      title: 'Instagram',
-      url: 'https://instagram.com/renan_sigolo',
+      title: "Instagram",
+      url: "https://instagram.com/renan_sigolo",
     },
     {
       icon: faFacebook,
-      title: 'Facebook',
-      url: 'https://facebook.com/renansigoloferreira',
+      title: "Facebook",
+      url: "https://facebook.com/renansigoloferreira",
     },
-  ]
+  ];
+
   return (
-    <ul>
+    <ul data-test="social-media-list">
       {allSocialMediaData.map((social, index) => (
         <li key={index}>
           <a href={social.url} target="_blank" rel="noopener noreferrer">
@@ -49,7 +50,7 @@ export function SocialMedia() {
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
 export default function Layout({ children }) {
@@ -85,5 +86,5 @@ export default function Layout({ children }) {
         <SocialMedia></SocialMedia>
       </footer>
     </div>
-  )
+  );
 }
