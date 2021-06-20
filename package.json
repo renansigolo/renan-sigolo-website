@@ -31,10 +31,10 @@
     "autoprefixer": "^10.2.6",
     "concurrently": "^6.2.0",
     "cypress": "^7.5.0",
-    "eslint": "^7.28.0",
+    "eslint": "^7.29.0",
     "eslint-config-next": "^11.0.0",
-    "postcss": "^8.3.4",
+    "postcss": "^8.3.5",
     "prettier": "^2.3.1",
-    "tailwindcss": "^2.1.4"
+    "tailwindcss": "^2.2.2"
   }
 }
