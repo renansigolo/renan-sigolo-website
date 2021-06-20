@@ -55,7 +55,7 @@ const allCardsData = [
 
 export default function Projects() {
   return (
-    <section>
+    <section data-test="projects-section">
       <h2 className="text-3xl text-center font-medium mb-8">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
         {allCardsData.map((card, index) => (
