@@ -2,9 +2,14 @@ import Image from "next/image";
 
 const allCardsData = [
   {
+    title: "AE Study",
+    subtitle: "Academy of Entrepreneurs Website",
+    url: "aestudy.com",
+  },
+  {
     title: "Healthy Bones Australia",
     subtitle: "Healthy Bones Australia Website",
-    url: "healthybonesaustralia.org.au/",
+    url: "healthybonesaustralia.org.au",
   },
   {
     title: "Healthy Kids",
@@ -14,7 +19,7 @@ const allCardsData = [
   {
     title: "The Constellation Project",
     subtitle: "The Constellation Project Website",
-    url: "theconstellationproject.com.au/",
+    url: "theconstellationproject.com.au",
   },
   {
     title: "Your Right To Know",
