@@ -16,7 +16,7 @@ describe("The Home Page", () => {
     // Check for a valid header
     cy.get("[data-test=projects-section]").find("h2").should("be.visible");
 
-    // Check if all projects have a valid image
+    // TODO: Check if all projects have a valid image
     // cy.get("[data-test=projects-section]")
     //   .find("img.rounded")
     //   .each((item) => {
@@ -40,7 +40,7 @@ describe("The Home Page", () => {
       .find("a")
       .each((item) => {
         // LinkedIn blocks the request therefore this exception is needed
-        if (item.prop("href") !== "https://www.linkedin.com/in/renansigolo") {
+        if (item.prop("href") !== "https://linkedin.com/in/renansigolo") {
           cy.request(item.prop("href"));
         }
       });
