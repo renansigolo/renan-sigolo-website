@@ -7,11 +7,6 @@ const allCardsData = [
     url: "aestudy.com",
   },
   {
-    title: "Healthy Bones Australia",
-    subtitle: "Healthy Bones Australia Website",
-    url: "healthybonesaustralia.org.au",
-  },
-  {
     title: "Healthy Kids",
     subtitle: "Healthy Kids Website",
     url: "healthykids.nsw.gov.au",
@@ -35,6 +30,11 @@ const allCardsData = [
     title: "TanAndCheek",
     subtitle: "Tan+Cheek Website",
     url: "tanandcheek.com",
+  },
+  {
+    title: "Healthy Bones Australia",
+    subtitle: "Healthy Bones Australia Website",
+    url: "healthybonesaustralia.org.au",
   },
   {
     title: "Linde",
