@@ -1,13 +1,14 @@
-import Head from "next/head";
-import style from "../styles/layout.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTwitter,
-  faGithub,
-  faLinkedinIn,
-  faInstagram,
   faFacebook,
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Head from "next/head";
+import { useEffect } from "react";
+import style from "../styles/layout.module.css";
 
 const siteTitle = "Renan Sigolo Website";
 
@@ -54,6 +55,21 @@ export function SocialMedia() {
 }
 
 export default function Layout({ children }) {
+  useEffect(() => {
+    if (process.env.NODE_ENV === "production") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        page_title: window.document.title,
+      });
+    }
+  });
+
   return (
     <div>
       <Head>
@@ -78,6 +94,11 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        ></script>
       </Head>
 
       <main className="container mb-12 max-w-screen-md">{children}</main>
