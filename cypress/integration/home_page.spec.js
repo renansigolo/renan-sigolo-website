@@ -16,14 +16,6 @@ describe("The Home Page", () => {
     // Check for a valid header
     cy.get("[data-test=projects-section]").find("h2").should("be.visible");
 
-    // TODO: Check if all projects have a valid image
-    // cy.get("[data-test=projects-section]")
-    //   .find("img.rounded")
-    //   .each((item) => {
-    //     cy.wrap(item).should("have.attr", "src");
-    //     cy.wrap(item).should("be.visible");
-    //   });
-
     // Check if all projects links are working
     cy.get("[data-test=projects-section]")
       .find("a")
