@@ -24,6 +24,8 @@ describe("The Home Page", () => {
       });
   });
 
+  // it.todo("should show project details on hover");
+
   it("should have all social media links except linkedin", () => {
     cy.get("[data-test=social-media-list]").children().should("have.length", 5);
 

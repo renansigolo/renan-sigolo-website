@@ -6,7 +6,6 @@
     "build": "next build",
     "clean:install": "npm run clean && npm i",
     "clean": "rm -rf package-lock.json .next node_modules",
-    "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "dev": "next dev",
@@ -33,8 +32,8 @@
     "cypress": "^8.0.0",
     "eslint": "^7.31.0",
     "eslint-config-next": "^11.0.1",
-    "postcss": "^8.3.5",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.7"
   }
 }

@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useState } from "react";
+import style from "../styles/projects.module.css";
 
 const allCardsData = [
   {
@@ -59,18 +61,26 @@ const allCardsData = [
 ];
 
 export default function Projects() {
+  const [activeProject, setActiveProject] = useState(-1);
+
   return (
-    <section data-test="projects-section">
+    <section data-test="projects-section" id="projects-section">
       <h2 className="text-3xl text-center font-medium mb-8">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
         {allCardsData.map((card, index) => (
           <a
             href={`https://${card.url}`}
-            className="w-auto transition transform hover:scale-105"
+            className={style.card}
             target="_blank"
             rel="noopener noreferrer"
             key={index}
             aria-label={card.subtitle}
+            onMouseOver={() => {
+              setActiveProject(index);
+            }}
+            onMouseLeave={() => {
+              setActiveProject(-1);
+            }}
           >
             <Image
               src={`/images/projects/${card.title
@@ -81,6 +91,17 @@ export default function Projects() {
               className="rounded"
               alt={`${card.title} Preview Image`}
             />
+            <div
+              className={`${
+                index === activeProject ? "" : "hidden"
+              } bg-gray-900 bg-opacity-70 absolute top-0 left-0 w-full h-full rounded `}
+            >
+              <p className="absolute bottom-4 left-4 text-gray-200">
+                <span className="font-bold">{card.title}</span>
+                <br />
+                {card.url}
+              </p>
+            </div>
           </a>
         ))}
       </div>
