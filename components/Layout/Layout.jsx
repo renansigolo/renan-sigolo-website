@@ -1,49 +1,14 @@
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faLinkedinIn,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import { useEffect } from "react";
-import style from "../styles/layout.module.css";
-
+import style from "./Layout.module.css";
+import { socialMediaData } from "./social-media-data.ts";
 const siteTitle = "Renan Sigolo Website";
 
-export function SocialMedia() {
-  const allSocialMediaData = [
-    {
-      icon: faTwitter,
-      title: "Twitter",
-      url: "https://twitter.com/renan_sigolo",
-    },
-    {
-      icon: faGithub,
-      title: "GitHub",
-      url: "https://github.com/renansigolo",
-    },
-    {
-      icon: faLinkedinIn,
-      title: "LinkedIn",
-      url: "https://linkedin.com/in/renansigolo",
-    },
-    {
-      icon: faInstagram,
-      title: "Instagram",
-      url: "https://instagram.com/renan_sigolo",
-    },
-    {
-      icon: faFacebook,
-      title: "Facebook",
-      url: "https://facebook.com/renansigoloferreira",
-    },
-  ];
-
+export function SocialMediaItem() {
   return (
     <ul data-test="social-media-list">
-      {allSocialMediaData.map((social, index) => (
+      {socialMediaData.map((social, index) => (
         <li key={index}>
           <a href={social.url} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={social.icon} size="lg" />
@@ -65,7 +30,7 @@ export default function Layout({ children }) {
       gtag("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
         page_location: window.location.href,
         page_path: window.location.pathname,
-        page_title: window.document.title,
+        page_title: window.document.title
       });
     }
   });
@@ -104,7 +69,7 @@ export default function Layout({ children }) {
       <main className="container mb-12 max-w-screen-md">{children}</main>
 
       <footer className={style.social}>
-        <SocialMedia></SocialMedia>
+        <SocialMediaItem />
       </footer>
     </div>
   );

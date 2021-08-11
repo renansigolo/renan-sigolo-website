@@ -1,6 +1,6 @@
-import Layout from "../components/layout";
-import Profile from "../components/profile";
-import Projects from "../components/projects";
+import Layout from "../components/Layout/Layout";
+import Profile from "../components/Profile/Profile";
+import Projects from "../components/Projects/Projects";
 
 export default function Home() {
   return (
