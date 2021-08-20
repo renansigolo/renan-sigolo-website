@@ -27,7 +27,7 @@ export default function Layout({ children }) {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+      gtag("config", process.env.NEXT_PUBLIC_GA_ID, {
         page_location: window.location.href,
         page_path: window.location.pathname,
         page_title: window.document.title
@@ -62,7 +62,7 @@ export default function Layout({ children }) {
 
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
         ></script>
       </Head>
 
