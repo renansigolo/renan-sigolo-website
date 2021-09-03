@@ -5,7 +5,7 @@ export default function Profile() {
   return (
     <div className={style.section} data-test="section-profile">
       <Image
-        src="/images/profile.webp"
+        src="/images/profile.jpg"
         className={style.avatar}
         width={128}
         height={128}
