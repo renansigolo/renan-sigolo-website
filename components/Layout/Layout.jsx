@@ -40,7 +40,7 @@ export default function Layout({ children }) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="description" content={siteTitle} />
-        <meta name="theme-color" content="#ff7496" />
+        <meta name="theme-color" content="#064e3b" />
         <meta name="apple-mobile-web-app-title" content="Renan Sigolo" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
