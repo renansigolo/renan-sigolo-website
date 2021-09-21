@@ -9,7 +9,10 @@ export default function Projects() {
   return (
     <section data-test="projects-section" id="projects-section">
       <h2 className="text-3xl text-center font-medium mb-8">My Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
+      <div
+        role="list"
+        className="group grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center"
+      >
         {projectsData.map((item, index) => (
           <a
             href={`https://${item.url}`}

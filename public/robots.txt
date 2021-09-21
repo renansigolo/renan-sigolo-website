@@ -1,2 +1,6 @@
+# *
 User-agent: *
-Disallow: 
+Allow: /
+
+# Sitemaps
+Sitemap: https://renansigolo.com/sitemap.xml
