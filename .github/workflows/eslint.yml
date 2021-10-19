@@ -1,5 +1,5 @@
+# Setup a Node.js environment and run ESlint scripts
 name: ESlint
-description: "Setup a Node.js environment and run ESlint scripts"
 on: [pull_request]
 jobs:
   run-linters:
