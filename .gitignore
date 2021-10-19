@@ -24,6 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -32,4 +33,7 @@ yarn-error.log*
 # pwa files
 **/public/workbox-*.js
 **/public/sw.js
+
+# other
+.vscode
 .vercel
