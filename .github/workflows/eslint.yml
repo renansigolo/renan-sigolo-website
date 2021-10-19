@@ -1,22 +1,22 @@
-# Run ESlint
 name: ESlint
-on: pull_request
+description: "Setup a Node.js environment and run ESlint scripts"
+on: [pull_request]
 jobs:
-  suite:
+  run-linters:
+    name: Run linters
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Check out Git repository
         uses: actions/checkout@v2
 
-      - name: Setup Node
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16"
-          cache: 'npm'
+          node-version: 16
 
-      - name: Install modules
-        run: npm install
+      - name: Install Node.js dependencies
+        run: npm ci
 
-      - name: Run ESLint
+      - name: Run ESlint
         run: npm run lint

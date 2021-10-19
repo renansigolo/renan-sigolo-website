@@ -1,5 +1,5 @@
-# Run Cypress end-to-end tests after Vercel Deploys a new Preview Environment
 name: Cypress end-to-end
+description: Run Cypress end-to-end tests after Vercel Deploys a new Preview Environment
 on: [deployment_status]
 jobs:
   cypress-run:
