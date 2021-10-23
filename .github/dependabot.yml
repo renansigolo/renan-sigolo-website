@@ -7,5 +7,5 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-  assignees:
+    assignees:
       - "renansigolo"
