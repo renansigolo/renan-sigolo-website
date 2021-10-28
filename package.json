@@ -22,7 +22,7 @@
     "lint:fix": "npm run lint -- --fix .",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "postversion": "git push",
+    "postversion": "git push && git push --tags",
     "start": "next start",
     "test": "npm run build && concurrently -k npm:start npm:cy:run"
   },
