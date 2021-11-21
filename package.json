@@ -47,7 +47,7 @@
     "next-sitemap": "1.6.192",
     "postcss": "8.3.11",
     "prettier": "2.4.1",
-    "tailwindcss": "2.2.17"
+    "tailwindcss": "2.2.19"
   },
   "engines": {
     "node": "^14.15.0 || >=16.13.0",
