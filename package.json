@@ -31,23 +31,23 @@
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-solid-svg-icons": "5.15.4",
     "@fortawesome/react-fontawesome": "0.1.16",
-    "@headlessui/react": "1.4.1",
+    "@headlessui/react": "1.4.2",
     "@heroicons/react": "1.0.5",
-    "next": "12.0.1",
+    "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sharp": "0.29.2"
+    "sharp": "0.29.3"
   },
   "devDependencies": {
     "autoprefixer": "10.4.0",
-    "concurrently": "6.3.0",
-    "cypress": "8.7.0",
+    "concurrently": "6.4.0",
+    "cypress": "9.0.0",
     "eslint": "7.32.0",
-    "eslint-config-next": "12.0.1",
-    "next-sitemap": "1.6.192",
+    "eslint-config-next": "12.0.4",
+    "next-sitemap": "1.6.203",
     "postcss": "8.3.11",
     "prettier": "2.4.1",
-    "tailwindcss": "2.2.17"
+    "tailwindcss": "2.2.19"
   },
   "engines": {
     "node": "^14.15.0 || >=16.13.0",
