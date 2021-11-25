@@ -46,7 +46,7 @@
     "eslint-config-next": "12.0.4",
     "next-sitemap": "1.6.203",
     "postcss": "8.3.11",
-    "prettier": "2.4.1",
+    "prettier": "2.5.0",
     "tailwindcss": "2.2.19"
   },
   "engines": {
