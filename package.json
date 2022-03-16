@@ -39,7 +39,7 @@
     "sharp": "0.29.3"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.0",
+    "autoprefixer": "10.4.4",
     "concurrently": "6.4.0",
     "cypress": "9.1.1",
     "eslint": "8.4.0",
