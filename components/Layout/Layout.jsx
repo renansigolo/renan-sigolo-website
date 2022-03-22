@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
+import Script from "next/script";
 import { useEffect } from "react";
 import style from "./Layout.module.css";
 import { socialMediaData } from "./social-media-data.ts";
@@ -59,12 +60,11 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
-
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-        ></script>
       </Head>
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      />
 
       <main className="container mb-12 max-w-screen-md">{children}</main>
 
