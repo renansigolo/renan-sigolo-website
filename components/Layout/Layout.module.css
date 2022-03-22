@@ -11,5 +11,5 @@
 }
 
 .social ul li:hover {
-  @apply transition duration-200 ease-in-out transform hover:scale-125 text-green-600;
+  @apply transition duration-200 ease-in-out hover:scale-125 text-green-600;
 }
