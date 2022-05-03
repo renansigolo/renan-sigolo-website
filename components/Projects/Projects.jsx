@@ -6,13 +6,14 @@ import style from "./Projects.module.css";
 export default function Projects() {
   const [activeProject, setActiveProject] = useState(-1);
 
+  const encodeImage = (imageUrl) => {
+    return imageUrl.toLowerCase().replace(/\s+/g, "");
+  };
+
   return (
     <section data-test="projects-section" id="projects-section">
-      <h2 className="text-3xl text-center font-medium mb-8">My Projects</h2>
-      <div
-        role="list"
-        className="group grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center"
-      >
+      <h2 className={style.heading}>My Projects</h2>
+      <div role="list" className={style.grid}>
         {projectsData.map((item, index) => (
           <a
             href={`https://${item.url}`}
@@ -29,21 +30,18 @@ export default function Projects() {
             }}
           >
             <Image
-              src={`/images/projects/${item.title
-                .toLowerCase()
-                .replace(/\s+/g, "")}.webp`}
+              src={`/images/projects/${encodeImage(item.title)}.webp`}
               width={360}
               height={225}
-              className="rounded"
+              className={style.rounded}
               alt={`${item.title} Preview Image`}
             />
             <div
-              className={`${
-                index === activeProject ? "" : "hidden"
-              } bg-gray-900 bg-opacity-70 absolute top-0 left-0 w-full h-full rounded `}
+              style={{ display: activeProject === index ? "block" : "none" }}
+              className={style.card_overlay}
             >
-              <p className="absolute bottom-4 left-4 text-gray-200">
-                <span className="font-bold">{item.title}</span>
+              <p className={style.card_title}>
+                <span>{item.title}</span>
                 <br />
                 {item.url}
               </p>
