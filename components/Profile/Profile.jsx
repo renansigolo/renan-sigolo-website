@@ -12,7 +12,7 @@ export default function Profile() {
         alt="Renan Sigolo profile picture"
       />
       <h1 className={style.title}>Renan Sigolo</h1>
-      <p className="text-xl font-light">Software Engineer</p>
+      <p className={style.subtitle}>Software Engineer</p>
     </div>
   );
 }

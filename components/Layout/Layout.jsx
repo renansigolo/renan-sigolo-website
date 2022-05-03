@@ -66,7 +66,7 @@ export default function Layout({ children }) {
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
       />
 
-      <main className="container mb-12 max-w-screen-md">{children}</main>
+      <main className={style.main}>{children}</main>
 
       <footer className={style.social}>
         <SocialMediaItem />
