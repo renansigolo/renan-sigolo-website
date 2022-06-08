@@ -33,22 +33,22 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "sharp": "0.30.5"
+    "sharp": "0.30.6"
   },
   "devDependencies": {
     "autoprefixer": "10.4.7",
     "concurrently": "7.2.1",
-    "cypress": "9.7.0",
-    "eslint": "8.16.0",
+    "cypress": "10.0.3",
+    "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
-    "next-sitemap": "2.5.25",
+    "next-sitemap": "3.0.5",
     "postcss": "8.4.14",
     "prettier": "2.6.2",
     "tailwindcss": "3.0.24"
   },
   "engines": {
-    "node": "^14.15.0 || >=16.13.0",
-    "npm": ">=6.14.8",
+    "node": "^16.13.0 || ^18.0.0",
+    "npm": ">=8.1.0",
     "yarn": "NO LONGER USED - Please use npm"
   },
   "browserslist": [
