@@ -1,15 +1,7 @@
-import React from "react"
 import { projectsData } from "./projects-data"
 import * as style from "./Projects.module.css"
 
 export default function Projects() {
-  const [activeProject, setActiveProject] = React.useState(-1)
-
-  React.useEffect(() => {
-    console.log("🚀 ~ Projects ~ activeProject", activeProject)
-    console.log("🚀 ~ Projects ~ useEffect")
-  }, [activeProject])
-
   const encodeImage = (imageUrl) => {
     return imageUrl.toLowerCase().replace(/\s+/g, "")
   }
@@ -26,19 +18,14 @@ export default function Projects() {
             rel="noopener noreferrer"
             key={index}
             aria-label={item.subtitle}
-            onMouseOver={() => setActiveProject(index)}
-            onMouseLeave={() => setActiveProject(-1)}
           >
             <img
               onMouseOver={() => setActiveProject(index)}
               src={`/images/projects/${encodeImage(item.title)}.webp`}
-              className={style.image}
+              className={style.card_image}
               alt={`${item.title} Preview Image`}
             />
-            <div
-              style={{ display: activeProject === index ? "block" : "none" }}
-              className={style.card_overlay}
-            >
+            <div className={style.card_overlay}>
               <p className={style.card_title}>
                 <span>{item.title}</span>
                 <br />
