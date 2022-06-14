@@ -1,10 +1,9 @@
-import Image from "next/image";
-import style from "./Profile.module.css";
+import * as style from "./Profile.module.css";
 
 export default function Profile() {
   return (
     <div className={style.section} data-test="section-profile">
-      <Image
+      <img
         src="/images/profile.jpg"
         className={style.avatar}
         width={128}

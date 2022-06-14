@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { useState } from "react";
-import { projectsData } from "./projects-data.ts";
-import style from "./Projects.module.css";
+import { projectsData } from "./projects-data";
+import * as style from "./Projects.module.css";
 
 export default function Projects() {
   const [activeProject, setActiveProject] = useState(-1);
@@ -22,14 +21,10 @@ export default function Projects() {
             rel="noopener noreferrer"
             key={index}
             aria-label={item.subtitle}
-            onMouseOver={() => {
-              setActiveProject(index);
-            }}
-            onMouseLeave={() => {
-              setActiveProject(-1);
-            }}
+            onMouseOver={() => setActiveProject(index)}
+            onMouseLeave={() => setActiveProject(-1)}
           >
-            <Image
+            <img
               src={`/images/projects/${encodeImage(item.title)}.webp`}
               width={360}
               height={225}
