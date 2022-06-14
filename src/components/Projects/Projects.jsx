@@ -20,8 +20,8 @@ export default function Projects() {
             aria-label={item.subtitle}
           >
             <img
-              onMouseOver={() => setActiveProject(index)}
               src={`/images/projects/${encodeImage(item.title)}.webp`}
+              loading="lazy"
               className={style.card_image}
               alt={`${item.title} Preview Image`}
             />
