@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { socialData } from "./social-data";
-import * as style from "./Social.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { socialData } from "./social-data"
+import * as style from "./Social.module.css"
 
 function SocialList() {
   return (
@@ -8,12 +8,12 @@ function SocialList() {
       {socialData?.map((social, index) => (
         <li key={index}>
           <a href={social?.url} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={social.icon} size="lg" />
+            <FontAwesomeIcon icon={social.icon} color="var(--gray-500)" />
           </a>
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
 export function Social() {
@@ -21,5 +21,5 @@ export function Social() {
     <div className={style.social}>
       <SocialList />
     </div>
-  );
+  )
 }

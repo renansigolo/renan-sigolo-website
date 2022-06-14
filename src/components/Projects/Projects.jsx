@@ -1,13 +1,18 @@
-import { useState } from "react";
-import { projectsData } from "./projects-data";
-import * as style from "./Projects.module.css";
+import React from "react"
+import { projectsData } from "./projects-data"
+import * as style from "./Projects.module.css"
 
 export default function Projects() {
-  const [activeProject, setActiveProject] = useState(-1);
+  const [activeProject, setActiveProject] = React.useState(-1)
+
+  React.useEffect(() => {
+    console.log("🚀 ~ Projects ~ activeProject", activeProject)
+    console.log("🚀 ~ Projects ~ useEffect")
+  }, [activeProject])
 
   const encodeImage = (imageUrl) => {
-    return imageUrl.toLowerCase().replace(/\s+/g, "");
-  };
+    return imageUrl.toLowerCase().replace(/\s+/g, "")
+  }
 
   return (
     <section data-test="projects-section" id="projects-section">
@@ -25,10 +30,9 @@ export default function Projects() {
             onMouseLeave={() => setActiveProject(-1)}
           >
             <img
+              onMouseOver={() => setActiveProject(index)}
               src={`/images/projects/${encodeImage(item.title)}.webp`}
-              width={360}
-              height={225}
-              className={style.rounded}
+              className={style.image}
               alt={`${item.title} Preview Image`}
             />
             <div
@@ -45,5 +49,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  );
+  )
 }

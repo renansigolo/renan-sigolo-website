@@ -1,10 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Head from "next/head";
-import Script from "next/script";
-import { useEffect } from "react";
-import style from "./Layout.module.css";
-import { socialMediaData } from "./social-media-data.ts";
-const siteTitle = "Renan Sigolo Website";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Head from "next/head"
+import Script from "next/script"
+import { useEffect } from "react"
+import style from "./Layout.module.css"
+import { socialMediaData } from "./social-media-data.ts"
+const siteTitle = "Renan Sigolo Website"
 
 export function SocialMediaItem() {
   return (
@@ -17,24 +17,24 @@ export function SocialMediaItem() {
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
 export default function Layout({ children }) {
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
       function gtag() {
-        dataLayer.push(arguments);
+        dataLayer.push(arguments)
       }
-      gtag("js", new Date());
+      gtag("js", new Date())
       gtag("config", process.env.NEXT_PUBLIC_GA_ID, {
         page_location: window.location.href,
         page_path: window.location.pathname,
         page_title: window.document.title
-      });
+      })
     }
-  });
+  })
 
   return (
     <div>
@@ -72,5 +72,5 @@ export default function Layout({ children }) {
         <SocialMediaItem />
       </footer>
     </div>
-  );
+  )
 }

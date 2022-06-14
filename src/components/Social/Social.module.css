@@ -13,6 +13,8 @@
   min-width: 100%;
   flex-direction: row;
   place-content: center;
+  list-style: none;
+  padding: 0;
 }
 
 .social ul li {
@@ -29,5 +31,8 @@
 
 .social ul li:hover {
   transform: scale(1.25);
+}
+
+svg:hover {
   color: var(--green-600);
 }

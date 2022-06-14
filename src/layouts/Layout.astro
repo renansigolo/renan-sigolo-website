@@ -2,42 +2,39 @@
 import { Social } from "../components/Social/Social";
 
 export interface Props {
-  title: string;
+  title: string
 }
 
-const { title } = Astro.props as Props;
+const { title } = Astro.props as Props
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="description" content={title} />
-  <meta name="theme-color" content="#064e3b" />
-  <meta name="apple-mobile-web-app-title" content="Renan Sigolo" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta
-    property="og:image"
-    content={`https://og-image.now.sh/${encodeURI(
-      title
-    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-  />
-  <meta name="og:title" content={title} />
-  <meta name="twitter:card" content="summary_large_image" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="description" content={title} />
+<meta name="theme-color" content="#064e3b" />
+<meta name="apple-mobile-web-app-title" content="Renan Sigolo" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta property="og:image" content={`https://og-image.now.sh/${encodeURI( title
+  )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`} />
+<meta name="og:title" content={title} />
+<meta name="twitter:card" content="summary_large_image" />
 
-  <title>{title}</title>
+<title>{title}</title>
 
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="apple-touch-icon" href="/apple-icon.png" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="apple-touch-icon" href="/apple-icon.png" />
 
-  <body>
-    <slot />
-  </body>
+<body>
+  <slot />
+</body>
 
-  <footer>
-    <Social />
-  </footer>
+<footer>
+  <Social />
+</footer>
+
 </html>

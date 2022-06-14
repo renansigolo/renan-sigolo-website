@@ -15,15 +15,16 @@
 
 .card {
   width: auto;
-  max-height: 98%;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, opacity,
+    box-shadow, transform, filter, backdrop-filter,
+    -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(0.3);
 }
 .card:hover {
   transform: scale(1.05);
+  filter: grayscale(0);
 }
 .card_title {
   position: absolute;
@@ -43,9 +44,10 @@
   border-radius: 0.25rem;
   width: 100%;
   height: 100%;
+  display: none;
 }
 
-/* Utilities */
-.rounded {
+.image {
   border-radius: 0.25rem;
+  max-width: 100%;
 }
