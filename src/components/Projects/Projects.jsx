@@ -9,21 +9,21 @@ export default function Projects() {
   return (
     <section data-test="projects-section" id="projects-section">
       <h2 className={style.heading}>My Projects</h2>
-      <div role="list" className={style.grid}>
+      <div className={style.grid} role="list">
         {projectsData.map((item, index) => (
           <a
-            href={`https://${item.url}`}
-            className={style.card}
-            target="_blank"
-            rel="noopener noreferrer"
             key={index}
             aria-label={item.subtitle}
+            className={style.card}
+            href={`https://${item.url}`}
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <img
-              src={`/images/projects/${encodeImage(item.title)}.webp`}
-              loading="lazy"
-              className={style.card_image}
               alt={`${item.title} Preview Image`}
+              className={style.card_image}
+              loading="lazy"
+              src={`/images/projects/${encodeImage(item.title)}.webp`}
             />
             <div className={style.card_overlay}>
               <p className={style.card_title}>

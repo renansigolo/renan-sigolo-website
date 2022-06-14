@@ -18,7 +18,7 @@
     "cy:run": "cypress run",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:fix": "npm run lint -- --fix .",
-    "lint": "next lint",
+    "lint": "eslint . --ext .js,.jsx",
     "postversion": "git push && git push --tags",
     "test": "npm run build && concurrently -k npm:start npm:cy:run",
     "dev": "astro dev",
@@ -45,7 +45,7 @@
     "concurrently": "7.2.1",
     "cypress": "10.1.0",
     "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
+    "eslint-plugin-react": "7.30.0",
     "postcss": "8.4.14",
     "prettier": "2.7.0",
     "prettier-plugin-astro": "0.0.12"
