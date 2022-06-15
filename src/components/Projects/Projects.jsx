@@ -22,7 +22,7 @@ export default function Projects() {
             <img
               alt={`${item.title} Preview Image`}
               className={style.card_image}
-              loading="lazy"
+              loading={index > 2 ? "lazy" : "eager"}
               src={`/images/projects/${encodeImage(item.title)}.webp`}
             />
             <div className={style.card_overlay}>
