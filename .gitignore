@@ -38,6 +38,7 @@ yarn-error.log*
 # other
 .vscode
 .vercel
+.firebase
 
 # sitemap
 public/sitemap*
