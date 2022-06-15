@@ -7,7 +7,12 @@ function SocialList() {
     <ul data-test="social-media-list">
       {socialData?.map((social, index) => (
         <li key={index}>
-          <a href={social?.url} rel="noopener noreferrer" target="_blank">
+          <a
+            href={social?.url}
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label={social.title}
+          >
             <FontAwesomeIcon color="var(--gray-500)" icon={social.icon} />
           </a>
         </li>
