@@ -30,6 +30,7 @@ pnpm-debug.log*
 .vscode
 .vercel
 .firebase
+firebase-debug.log
 
 # sitemap
 public/sitemap*
