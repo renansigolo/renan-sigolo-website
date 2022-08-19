@@ -1,30 +1,17 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Head from "next/head"
 import Script from "next/script"
-import { useEffect } from "react"
 import style from "./Layout.module.css"
-import { socialMediaData } from "./social-media-data.ts"
-const siteTitle = "Renan Sigolo Website"
 
-export function SocialMediaItem() {
-  return (
-    <ul data-test="social-media-list">
-      {socialMediaData.map((social, index) => (
-        <li key={index}>
-          <a href={social.url} rel="noopener noreferrer" target="_blank">
-            <FontAwesomeIcon icon={social.icon} size="lg" />
-          </a>
-        </li>
-      ))}
-    </ul>
-  )
-}
+import { useEffect } from "react"
+import { SocialMediaItem } from "../../src/components/Social/Social"
+
+const siteTitle = "Renan Sigolo Website"
 
 export default function Layout({ children }) {
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       window.dataLayer = window.dataLayer || []
-      function gtag() {
+      const gtag = () => {
         dataLayer.push(arguments)
       }
       gtag("js", new Date())

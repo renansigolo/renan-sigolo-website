@@ -24,11 +24,11 @@ export const projectsData = [
     subtitle: "Canturi Website",
     url: "shop.canturi.com"
   },
-  {
-    title: "TanAndCheek",
-    subtitle: "Tan+Cheek Website",
-    url: "tanandcheek.com"
-  },
+  // {
+  //   title: "TanAndCheek",
+  //   subtitle: "Tan+Cheek Website",
+  //   url: "tanandcheek.com"
+  // },
   {
     title: "Healthy Bones Australia",
     subtitle: "Healthy Bones Australia Website",
