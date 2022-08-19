@@ -10,7 +10,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 echo '#!/bin/sh
 #
 # Run prettier before every commit
-
 npm run format' >> .git/hooks/pre-commit
 chmod u+x .git/hooks/pre-commit # make file executable
 ```
