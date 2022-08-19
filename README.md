@@ -2,6 +2,18 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Getting Started
+
+### Setup pre-commit hooks
+
+```bash
+echo '#!/bin/sh
+#
+# Run prettier before every commit
+
+npm run format' >> .git/hooks/pre-commit
+```
+
 ## Development
 
 If you're configuring this app for the first time
