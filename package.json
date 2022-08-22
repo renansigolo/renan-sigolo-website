@@ -33,15 +33,15 @@
     "@fortawesome/free-regular-svg-icons": "6.1.2",
     "@fortawesome/free-solid-svg-icons": "6.1.2",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "astro-compress": "^1.0.2",
-    "modern-normalize": "^1.1.0",
+    "astro-compress": "1.0.3",
+    "modern-normalize": "1.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@astrojs/react": "1.0.0",
     "@astrojs/sitemap": "1.0.0",
-    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/tailwind": "1.0.0",
     "astro": "1.0.6",
     "autoprefixer": "10.4.8",
     "concurrently": "7.3.0",
