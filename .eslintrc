@@ -1,3 +1,39 @@
 {
-  "extends": "next/core-web-vitals"
+  "ignorePatterns": ["dist", "cypress"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "globals": {
+    "dataLayer": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "plugin:react/jsx-runtime",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "no-restricted-imports": 0,
+    "react/jsx-sort-props": [
+      1,
+      {
+        "reservedFirst": true,
+        "shorthandFirst": true,
+        "callbacksLast": true,
+        "multiline": "last"
+      }
+    ]
+  }
 }

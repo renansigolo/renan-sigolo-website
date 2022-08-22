@@ -1,12 +1,10 @@
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faLinkedinIn,
-  faTwitter
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook"
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
+import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram"
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
 
-export const socialMediaData = [
+export const socialData = [
   {
     icon: faTwitter,
     title: "Twitter",
@@ -32,4 +30,4 @@ export const socialMediaData = [
     title: "Facebook",
     url: "https://facebook.com/renansigoloferreira"
   }
-];
+]

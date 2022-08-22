@@ -1,6 +1,6 @@
 {
   "name": "renan-sigolo",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "private": true,
   "homepage": "https://renansigolo.com",
   "author": "Renan Sigolo <renan.sigolo@gmail.com>",
@@ -13,38 +13,44 @@
     "url": "https://github.com/renansigolo/renan-sigolo.git"
   },
   "scripts": {
-    "build": "next build",
     "clean": "rm -rf package-lock.json node_modules .next",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "dev": "next dev",
+    "deploy": "npm run build && firebase deploy --only hosting",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:fix": "npm run lint -- --fix .",
-    "lint": "next lint",
-    "postbuild": "next-sitemap",
+    "lint": "eslint . --ext .js,.jsx",
     "postversion": "git push && git push --tags",
-    "start": "next start",
-    "test": "npm run build && concurrently -k npm:start npm:cy:run"
+    "test": "npm run build && concurrently -k npm:start npm:cy:run",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.1.2",
     "@fortawesome/free-brands-svg-icons": "6.1.2",
+    "@fortawesome/free-regular-svg-icons": "6.1.2",
+    "@fortawesome/free-solid-svg-icons": "6.1.2",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "next": "12.2.5",
+    "astro-compress": "1.0.3",
+    "modern-normalize": "1.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sharp": "0.30.7"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@astrojs/react": "1.0.0",
+    "@astrojs/sitemap": "1.0.0",
+    "@astrojs/tailwind": "1.0.0",
+    "astro": "1.0.6",
     "autoprefixer": "10.4.8",
     "concurrently": "7.3.0",
     "cypress": "10.6.0",
     "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5",
-    "next-sitemap": "3.1.20",
+    "eslint-plugin-react": "7.30.1",
     "postcss": "8.4.16",
     "prettier": "2.7.1",
-    "tailwindcss": "3.1.8"
+    "prettier-plugin-astro": "0.5.0"
   },
   "engines": {
     "node": "^16.13.0 || ^18.0.0",

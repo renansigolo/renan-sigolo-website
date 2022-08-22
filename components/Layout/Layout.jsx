@@ -1,65 +1,52 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Head from "next/head";
-import Script from "next/script";
-import { useEffect } from "react";
-import style from "./Layout.module.css";
-import { socialMediaData } from "./social-media-data.ts";
-const siteTitle = "Renan Sigolo Website";
+import Head from "next/head"
+import Script from "next/script"
+import style from "./Layout.module.css"
 
-export function SocialMediaItem() {
-  return (
-    <ul data-test="social-media-list">
-      {socialMediaData.map((social, index) => (
-        <li key={index}>
-          <a href={social.url} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={social.icon} size="lg" />
-          </a>
-        </li>
-      ))}
-    </ul>
-  );
-}
+import { useEffect } from "react"
+import { SocialMediaItem } from "../../src/components/Social/Social"
+
+const siteTitle = "Renan Sigolo Website"
 
 export default function Layout({ children }) {
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      window.dataLayer = window.dataLayer || []
+      const gtag = () => {
+        dataLayer.push(arguments)
       }
-      gtag("js", new Date());
+      gtag("js", new Date())
       gtag("config", process.env.NEXT_PUBLIC_GA_ID, {
         page_location: window.location.href,
         page_path: window.location.pathname,
         page_title: window.document.title
-      });
+      })
     }
-  });
+  })
 
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="description" content={siteTitle} />
-        <meta name="theme-color" content="#064e3b" />
-        <meta name="apple-mobile-web-app-title" content="Renan Sigolo" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="mobile-web-app-capable" content="yes" />
+        <meta content={siteTitle} name="description" />
+        <meta content="#064e3b" name="theme-color" />
+        <meta content="Renan Sigolo" name="apple-mobile-web-app-title" />
+        <meta content="default" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="yes" name="mobile-web-app-capable" />
         <meta
           property="og:image"
           content={`https://og-image.now.sh/${encodeURI(
             siteTitle
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta content={siteTitle} name="og:title" />
+        <meta content="summary_large_image" name="twitter:card" />
 
         <title>{siteTitle}</title>
 
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <link href="/favicon.ico" rel="icon" />
+        <link href="/manifest.json" rel="manifest" />
+        <link href="/apple-icon.png" rel="apple-touch-icon"></link>
       </Head>
       <Script
         async
@@ -72,5 +59,5 @@ export default function Layout({ children }) {
         <SocialMediaItem />
       </footer>
     </div>
-  );
+  )
 }

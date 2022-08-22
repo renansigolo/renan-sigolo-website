@@ -1,4 +1,4 @@
-@tailwind base;
+@import "modern-normalize/modern-normalize.css";
 
 :root {
   /* Colors */
@@ -21,4 +21,12 @@
   /* Global styles */
   color: var(--gray-100);
   background-color: var(--gray-800);
+  accent-color: var(--green-600);
+}
+
+main {
+  max-width: var(--tablet);
+  margin-inline: auto;
+  margin-bottom: 3rem;
+  padding-inline: 1rem;
 }
