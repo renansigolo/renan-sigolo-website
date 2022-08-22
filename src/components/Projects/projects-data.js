@@ -49,4 +49,4 @@ export const projectsData = [
     subtitle: "Kent Leaderboard",
     url: "lead.kent.edu.au"
   }
-];
+]
