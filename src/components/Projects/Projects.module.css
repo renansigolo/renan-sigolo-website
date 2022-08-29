@@ -23,8 +23,11 @@
   transform: scale(1.05);
 }
 .card_image {
+  aspect-ratio: 16 / 10;
   border-radius: 0.25rem;
   max-width: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 .card_title {
   position: absolute;
