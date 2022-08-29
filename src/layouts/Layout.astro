@@ -2,7 +2,6 @@
 import { Social } from "../components/Social/Social"
 
 const { title } = Astro.props
-const { NEXT_PUBLIC_GA_ID } = import.meta.env
 ---
 
 <!DOCTYPE html>
@@ -43,7 +42,7 @@ const { NEXT_PUBLIC_GA_ID } = import.meta.env
     <!-- Google Analytics -->
     <script
       type="text/partytown"
-      src=`https://www.googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GA_ID}`
+      src="https://www.googletagmanager.com/gtag/js?id=G-KZ07JERQ10"
     ></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || []
@@ -51,7 +50,7 @@ const { NEXT_PUBLIC_GA_ID } = import.meta.env
         dataLayer.push(arguments)
       }
       gtag("js", new Date())
-      gtag("config", import.meta.env.NEXT_PUBLIC_GA_ID)
+      gtag("config", "G-KZ07JERQ10")
     </script>
   </head>
 
