@@ -17,13 +17,16 @@ export default function Projects() {
             className={style.card}
             href={`https://${item.url}`}
             rel="noopener noreferrer"
+            role="listitem"
             target="_blank"
           >
             <img
               alt={`${item.title} Preview Image`}
               className={style.card_image}
+              height={225}
               loading={index > 1 ? "lazy" : "eager"}
               src={`/images/projects/${encodeImage(item.title)}.webp`}
+              width={360}
             />
             <div className={style.card_overlay}>
               <p className={style.card_title}>

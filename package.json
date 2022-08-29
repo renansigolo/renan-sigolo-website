@@ -18,12 +18,12 @@
     "clean": "rm -rf package-lock.json node_modules dist",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "deploy": "npm run build && firebase deploy --only hosting",
     "dev": "astro dev",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:fix": "npm run lint -- --fix .",
     "lint": "eslint . --ext .js,.jsx",
     "postversion": "git push && git push --tags",
+    "postinstall": "node scripts/postinstall",
     "preview": "astro preview",
     "start": "astro dev",
     "test": "npm run build && concurrently -k npm:start npm:cy:run"
