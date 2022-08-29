@@ -8,7 +8,7 @@ export default function Profile() {
         className={style.avatar}
         height={128}
         loading="eager"
-        src="/images/profile.webp"
+        src="/images/profile-512.webp"
         width={128}
       />
       <h1 className={style.title}>Renan Sigolo</h1>
