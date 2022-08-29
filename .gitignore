@@ -22,8 +22,6 @@ pnpm-debug.log*
 
 # Other
 .vercel
-.firebase
-firebase-debug.log
 
 # Cypress
 cypress/results/*
