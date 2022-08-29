@@ -21,16 +21,16 @@ module.exports = {
     }
   },
   plugins: ["jsx-a11y"],
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime"
-  ],
   overrides: [
     {
       // Define the configuration for `.js/.jsx` file.
       files: ["*.js", "*.jsx"],
-      extends: ["plugin:jsx-a11y/recommended"],
+      extends: [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:jsx-a11y/recommended"
+      ],
       rules: {
         "react/jsx-sort-props": [
           1,

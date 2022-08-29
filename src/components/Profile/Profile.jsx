@@ -4,7 +4,7 @@ export default function Profile() {
   return (
     <section className={style.section} data-test="section-profile">
       <img
-        alt="Renan Sigolo profile"
+        alt="Renan Sigolo Profile"
         className={style.avatar}
         height={128}
         loading="eager"

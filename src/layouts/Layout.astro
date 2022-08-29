@@ -51,9 +51,7 @@ const { NEXT_PUBLIC_GA_ID } = import.meta.env
         dataLayer.push(arguments)
       }
       gtag("js", new Date())
-
-      // eslint-disable-next-line no-undef
-      gtag("config", `${NEXT_PUBLIC_GA_ID}`)
+      gtag("config", import.meta.env.NEXT_PUBLIC_GA_ID)
     </script>
   </head>
 
