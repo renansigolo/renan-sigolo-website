@@ -1,11 +1,7 @@
 ---
 import { Social } from "../components/Social/Social"
 
-export interface Props {
-  title: string
-}
-
-const { title } = Astro.props as Props
+const { title } = Astro.props
 const { NEXT_PUBLIC_GA_ID } = import.meta.env
 ---
 
@@ -56,6 +52,7 @@ const { NEXT_PUBLIC_GA_ID } = import.meta.env
       }
       gtag("js", new Date())
 
+      // eslint-disable-next-line no-undef
       gtag("config", `${NEXT_PUBLIC_GA_ID}`)
     </script>
   </head>
