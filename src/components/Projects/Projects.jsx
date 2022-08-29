@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <section data-test="projects-section" id="projects-section">
       <h2 className={style.heading}>My Projects</h2>
-      <div className={style.grid} role="list">
+      <div className={style.grid}>
         {projectsData.map((item, index) => (
           <a
             key={index}
@@ -17,11 +17,10 @@ export default function Projects() {
             className={style.card}
             href={`https://${item.url}`}
             rel="noopener noreferrer"
-            role="listitem"
             target="_blank"
           >
             <img
-              alt={`${item.title} Preview Image`}
+              alt={`${item.title} Preview`}
               className={style.card_image}
               height={225}
               loading={index > 1 ? "lazy" : "eager"}

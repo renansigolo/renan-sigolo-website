@@ -2,8 +2,7 @@ const fs = require("fs")
 const execSync = require("child_process").execSync
 
 const preCommitContent = `#!/bin/sh
-#
-# Run prettier before every commit
+npm run lint
 npm run format`
 
 // write pre-commit file

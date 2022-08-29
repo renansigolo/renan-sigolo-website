@@ -20,16 +20,17 @@ module.exports = {
       version: "detect"
     }
   },
+  plugins: ["jsx-a11y"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:astro/recommended"
+    "plugin:react/jsx-runtime"
   ],
   overrides: [
     {
       // Define the configuration for `.js/.jsx` file.
       files: ["*.js", "*.jsx"],
+      extends: ["plugin:jsx-a11y/recommended"],
       rules: {
         "react/jsx-sort-props": [
           1,
@@ -45,7 +46,8 @@ module.exports = {
     {
       // Define the configuration for `.astro` file.
       files: ["*.astro"],
-      parser: "astro-eslint-parser"
+      parser: "astro-eslint-parser",
+      extends: ["plugin:astro/recommended", "plugin:astro/jsx-a11y-strict"]
     }
   ]
 }
