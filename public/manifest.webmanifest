@@ -1,7 +1,8 @@
 {
+  "id": "renan-sigolo-website",
   "name": "Renan Sigolo Website",
   "short_name": "Renan Sigolo",
-  "description": "Renan Sigolo Personal Portfolio",
+  "description": "Renan Sigolo Website",
   "theme_color": "#064e3b",
   "background_color": "#2c2e33",
   "display": "minimal-ui",
@@ -41,20 +42,22 @@
       "type": "image/png"
     },
     {
-      "src": "images/icons/icon-196x196.png",
-      "sizes": "196x196",
+      "src": "images/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icons/maskable-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "images/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
-    },
-    {
-      "src": "images/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
     }
   ]
 }
