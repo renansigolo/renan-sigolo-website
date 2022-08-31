@@ -6,7 +6,7 @@ on: [deployment_status]
 jobs:
   run_e2e:
     name: Run E2E Tests
-    if: github.event.deployment_status.state == 'success'
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
