@@ -1,5 +1,5 @@
 {
-  "name": "renan-sigolo",
+  "name": "renan-sigolo-website",
   "version": "3.0.0",
   "private": true,
   "homepage": "https://renansigolo.com",
@@ -22,11 +22,12 @@
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:fix": "npm run lint -- --fix .",
     "lint": "eslint 'src/**/*.{js,jsx,astro}'",
-    "postversion": "git push && git push --tags",
     "postinstall": "node scripts/postinstall",
+    "postversion": "git push && git push --tags",
+    "prepare": "husky install",
     "preview": "astro preview",
     "start": "astro dev",
-    "test": "npm run build && concurrently -k npm:start npm:cy:run"
+    "test": "npm run build && concurrently -k npm:preview npm:cy:run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.1.2",
@@ -41,6 +42,8 @@
     "@astrojs/react": "1.1.0",
     "@astrojs/sitemap": "1.0.0",
     "@astrojs/tailwind": "1.0.0",
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
     "astro": "1.1.1",
     "astro-compress": "1.0.6",
     "autoprefixer": "10.4.8",
@@ -50,6 +53,7 @@
     "eslint-plugin-astro": "0.17.1",
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react": "7.31.1",
+    "husky": "8.0.0",
     "postcss": "8.4.16",
     "prettier": "2.7.1",
     "prettier-plugin-astro": "0.5.3",
