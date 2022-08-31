@@ -22,7 +22,6 @@
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:fix": "npm run lint -- --fix .",
     "lint": "eslint 'src/**/*.{js,jsx,astro}'",
-    "postinstall": "node scripts/postinstall",
     "postversion": "git push && git push --tags",
     "prepare": "husky install",
     "preview": "astro preview",
