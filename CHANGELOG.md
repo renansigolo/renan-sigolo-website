@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/renansigolo/renan-sigolo-website/compare/v2.2.0...v2.2.1) (2022-08-31)
+
+
+### Bug Fixes
+
+* cypress trigger ([#192](https://github.com/renansigolo/renan-sigolo-website/issues/192)) ([58ba6bc](https://github.com/renansigolo/renan-sigolo-website/commit/58ba6bc728ee4868dd6f9808537a825ba4ae0e37))
+
 ## [2.2.0](https://github.com/renansigolo/renan-sigolo-website/compare/v2.1.0...v2.2.0) (2022-08-31)
 
 
