@@ -1,0 +1,74 @@
+<section id="projects">
+  <h2 class="heading">My Projects</h2>
+  <div class="grid">
+    {{ range $.Site.Data }}
+      {{ range .projects }}
+        {{ $src := resources.Get (replace .title " " ""  | printf "images/projects/%s.webp" | lower) }}
+        {{ $alt := (print .title " preview") }}
+
+        {{ $tinyw := default "500x webp" }}
+        {{ $smallw := default "800x webp" }}
+        {{ $mediumw := default "1200x webp" }}
+        {{ $largew := default "1500x webp" }}
+
+        {{/* resize the src image to the given sizes */}}
+        {{ $data := newScratch }}
+        {{ $data.Set "tiny" ($src.Resize $tinyw) }}
+        {{ $data.Set "small" ($src.Resize $smallw) }}
+        {{ $data.Set "medium" ($src.Resize $mediumw) }}
+        {{ $data.Set "large" ($src.Resize $largew) }}
+
+        {{/* add the processed images to the scratch */}}
+        {{ $tiny := $data.Get "tiny" }}
+        {{ $small := $data.Get "small" }}
+        {{ $medium := $data.Get "medium" }}
+        {{ $large := $data.Get "large" }}
+
+
+        <a
+          class="card"
+          aria-label="{{ .subtitle }}"
+          href="https://{{ .url }}"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <picture>
+            <source
+              media="(max-width: 376px)"
+              srcset="{{ with $tiny.RelPermalink }}{{ . }}{{ end }}"
+            />
+            <source
+              media="(max-width: 992px)"
+              srcset="{{ with $small.RelPermalink }}{{ . }}{{ end }}"
+            />
+            <source
+              media="(max-width: 1599px)"
+              srcset="{{ with $medium.RelPermalink }}{{ . }}{{ end }}"
+            />
+            <source
+              media="(min-width: 1600px)"
+              srcset="{{ with $large.RelPermalink }}{{ . }}{{ end }}"
+            />
+
+            <img
+              alt="{{ $alt }}"
+              title="{{ $alt }}"
+              src="{{ $src }}"
+              height="{{ $src.Height }}"
+              width="{{ $src.Width }}"
+              class="card_image"
+            />
+          </picture>
+
+          <div class="card_overlay">
+            <p class="card_title">
+              <span>{{ .title }}</span>
+              <br />
+              {{ .url }}
+            </p>
+          </div>
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>

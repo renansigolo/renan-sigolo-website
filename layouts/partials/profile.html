@@ -1,0 +1,18 @@
+{{ $image := resources.Get "images/profile-512.webp" }}
+{{ $image := $image.Resize "512x" }}
+
+
+<section class="profile">
+  <div class="container">
+    <img
+      alt="Renan Sigolo Profile"
+      class="avatar"
+      src="{{ $image.RelPermalink }}"
+      width="{{ $image.Width }}"
+      height="{{ $image.Height }}"
+    />
+
+    <h1 class="title">Renan Sigolo</h1>
+    <p class="subtitle">Software Engineer</p>
+  </div>
+</section>

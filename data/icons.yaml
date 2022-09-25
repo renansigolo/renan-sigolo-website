@@ -1,0 +1,17 @@
+---
+icons:
+  - id: fa-twitter
+    title: Twitter
+    url: https://twitter.com/renan_sigolo
+  - id: fa-github
+    title: GitHub
+    url: https://github.com/renansigolo
+  - id: fa-linkedin
+    title: LinkedIn
+    url: https://linkedin.com/in/renansigolo
+  - id: fa-instagram
+    title: Instagram
+    url: https://instagram.com/renan_sigolo
+  - id: fa-facebook
+    title: Facebook
+    url: https://facebook.com/renansigoloferreira

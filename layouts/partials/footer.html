@@ -1,0 +1,20 @@
+<footer>
+  <div class="social">
+    <ul>
+      {{ range $.Site.Data }}
+        {{ range .icons }}
+          <li>
+            <a
+              aria-label="{{ .title }}"
+              href="{{ .url }}"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {{ partial "fontawesome.html" (lower .title) }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+</footer>

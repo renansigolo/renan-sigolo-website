@@ -1,0 +1,36 @@
+<head>
+  {{/* Meta Tags */}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ .Site.Title }}" />
+  <meta name="theme-color" content="#064e3b" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  {{/* Favicon */}}
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" href="favicon.ico" />
+
+  {{/* Manifest */}}
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  {{/* Apple */}}
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#111827b3" />
+
+  {{/* Styles */}}
+  {{ $options := (dict "targetPath" "styles.min.css" "outputStyle" "compressed") }}
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+  {{/* Scripts */}}
+  {{ $plugins := resources.Get "js/plugins.js" }}
+  {{ $global := resources.Get "js/global.js" }}
+  {{ $js := slice $plugins $global | resources.Concat "scripts.js" | minify | fingerprint }}
+  <script defer src="{{ $js.Permalink }}"></script>
+
+  {{/* Page Title */}}
+  <title>{{ .Page.Title }}</title>
+</head>

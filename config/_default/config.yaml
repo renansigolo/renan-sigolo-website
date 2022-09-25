@@ -1,0 +1,12 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Renan Sigolo Website"
+
+disableHugoGeneratorInject: true
+enableRobotsTXT: true
+publishdir: "dist"
+minify: true
+disableKinds:
+  - taxonomy
+  - term
+  - RSS

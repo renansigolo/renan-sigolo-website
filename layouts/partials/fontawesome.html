@@ -1,0 +1,17 @@
+<style>
+  .inline-svg {
+    display: inline-block;
+    height: 1.15rem;
+    width: 1.15rem;
+    top: 0.15rem;
+    position: relative;
+    color: var(--gray-500);
+  }
+</style>
+
+<i class="inline-svg">
+  {{- $fname:=print "node_modules/@fortawesome/fontawesome-free/svgs/brands/" . ".svg" -}}
+  {{- $path:="<path" -}}
+  {{- $fill:="<path fill=\"currentColor\"" -}}
+  {{ replace (readFile $fname) $path $fill | safeHTML }}
+</i>

@@ -1,0 +1,55 @@
+#projects {
+  .heading {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    place-items: center;
+    grid-gap: 1rem;
+  }
+
+  .card {
+    transition-property: background-color, opacity, transform, backdrop-filter;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card_image {
+    aspect-ratio: 16 / 10;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  .card_title {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+    color: var(--gray-200);
+  }
+  .card_title span {
+    font-weight: var(--bold);
+  }
+  .card:hover .card_overlay {
+    display: block;
+  }
+
+  .card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-gray-900);
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+}
