@@ -1,0 +1,49 @@
+<section data-test="section-profile">
+  <img
+    alt="Renan Sigolo Profile"
+    height={128}
+    loading="eager"
+    src="/images/profile-512.webp"
+    width={128}
+  />
+  <h1>Renan Sigolo</h1>
+  <p>Software Engineer</p>
+</section>
+
+<style>
+  section {
+    margin: 8rem auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+  }
+
+  h1 {
+    margin: 0.5rem auto;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.025em;
+    font-weight: 500;
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    margin: 0;
+  }
+</style>
