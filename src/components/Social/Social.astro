@@ -14,7 +14,7 @@ import { socialData } from "./social-data"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <FontAwesomeIcon color="var(--gray-500)" icon={social.icon} />
+            <FontAwesomeIcon icon={social.icon} />
           </a>
         </li>
       ))
@@ -22,7 +22,7 @@ import { socialData } from "./social-data"
   </ul>
 </div>
 
-<style>
+<style lang="scss">
   .social {
     display: flex;
     height: 5rem;
@@ -43,23 +43,21 @@ import { socialData } from "./social-data"
   }
 
   .social ul li {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-inline: 0.5rem;
     width: 1rem;
     color: var(--gray-500);
-    transition-property: color, background-color, border-color,
-      text-decoration-color, fill, stroke, opacity, box-shadow, transform,
-      filter, backdrop-filter, -webkit-text-decoration-color,
-      -webkit-backdrop-filter;
-    transition-duration: 200ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.25);
+    }
   }
 
-  .social ul li:hover {
-    transform: scale(1.25);
-  }
+  .social ul li a {
+    color: var(--gray-500);
 
-  svg:hover {
-    color: var(--green-600);
+    &:hover {
+      color: var(--green-600);
+    }
   }
 </style>
