@@ -24,36 +24,36 @@ import { socialData } from "./social-data"
 
 <style lang="scss">
   .social {
+    border-top: 1px solid var(--gray-500);
     display: flex;
+    flex-direction: column;
     height: 5rem;
     min-width: 100%;
-    flex-direction: column;
     place-content: center;
-    border-top: 1px solid var(--gray-500);
   }
 
   .social ul {
     display: flex;
-    height: 1rem;
-    min-width: 100%;
     flex-direction: row;
-    place-content: center;
+    height: 1rem;
     list-style: none;
+    min-width: 100%;
     padding: 0;
+    place-content: center;
   }
 
   .social ul li {
-    margin-inline: 0.5rem;
-    width: 1rem;
     color: var(--gray-500);
+    margin-inline: 0.5rem;
     transition: transform 0.2s ease-in-out;
+    width: 1rem;
 
     &:hover {
       transform: scale(1.25);
     }
   }
 
-  .social ul li a {
+  .social a {
     color: var(--gray-500);
 
     &:hover {

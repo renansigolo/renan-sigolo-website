@@ -21,14 +21,14 @@ const encodeImage = (imageUrl: string) => {
         >
           <img
             alt={`${item.title} Preview`}
-            class="card_image"
+            class="card-image"
             height={225}
             loading="lazy"
             src={encodeImage(item.title)}
             width={360}
           />
-          <div class="card_overlay">
-            <p class="card_title">
+          <div class="card-overlay">
+            <p class="card-title">
               <span>{item.title}</span>
               <br />
               {item.url}
@@ -42,55 +42,60 @@ const encodeImage = (imageUrl: string) => {
 
 <style>
   .heading {
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 2.25rem;
     margin-bottom: 2rem;
     text-align: center;
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 500;
   }
 
   .grid {
     display: grid;
+    grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     place-items: center;
-    grid-gap: 1rem;
   }
 
   .card {
-    width: auto;
     transition: transform 0.2s ease-in-out;
+    width: auto;
   }
+
   .card:hover {
     transform: scale(1.05);
   }
-  .card_image {
+
+  .card-image {
     aspect-ratio: 16 / 10;
     border-radius: 0.25rem;
     max-width: 100%;
     object-fit: cover;
     width: 100%;
   }
-  .card_title {
-    position: absolute;
+
+  .card-title {
     bottom: 0.5rem;
-    left: 1rem;
     color: var(--gray-200);
-  }
-  .card_title span {
-    font-weight: var(--bold);
-  }
-  .card:hover .card_overlay {
-    display: block;
+    left: 1rem;
+    position: absolute;
   }
 
-  .card_overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .card-title span {
+    font-weight: var(--bold);
+  }
+
+  .card-overlay {
     background-color: var(--bg-gray-900);
     border-radius: 0.25rem;
-    width: 100%;
-    height: 100%;
     display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .card:hover .card-overlay {
+    display: block;
   }
 </style>

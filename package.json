@@ -20,8 +20,9 @@
     "cy:run": "cypress run",
     "dev": "astro dev",
     "format": "prettier '**/*' --write --ignore-unknown",
-    "lint:fix": "npm run lint -- --fix .",
-    "lint": "eslint 'src/**/*.{js,jsx,astro}'",
+    "lint:js": "eslint 'src/**/*.{js,jsx,astro}' --fix",
+    "lint:scss": "stylelint 'src/**/*.{astro,scss,css}' --fix",
+    "lint": "npm run lint:js && npm run lint:scss",
     "postversion": "git push && git push --tags",
     "prepare": "husky install",
     "preview": "astro preview",
@@ -35,6 +36,7 @@
     "modern-normalize": "1.1.0"
   },
   "devDependencies": {
+    "@astrojs/image": "0.7.1",
     "@astrojs/partytown": "1.0.0",
     "@astrojs/react": "1.1.4",
     "@astrojs/sitemap": "1.0.0",
@@ -52,11 +54,16 @@
     "eslint-plugin-react": "7.31.8",
     "husky": "8.0.1",
     "postcss": "8.4.16",
+    "postcss-html": "1.5.0",
     "prettier": "2.7.1",
     "prettier-plugin-astro": "0.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "1.55.0"
+    "sass": "1.55.0",
+    "stylelint": "^14.12.1",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-recommended-scss": "7.0.0",
+    "stylelint-config-sass-guidelines": "9.0.1"
   },
   "engines": {
     "node": "^16.13.0 || ^18.0.0",
