@@ -1,10 +1,14 @@
+---
+import { Image } from "@astrojs/image/components"
+---
+
 <section data-test="section-profile">
-  <img
+  <Image
+    src="images/profile.jpeg"
+    width={256}
+    height={256}
     alt="Renan Sigolo Profile"
-    height={128}
-    loading="eager"
-    src="/images/profile-512.webp"
-    width={128}
+    format="webp"
   />
   <h1>Renan Sigolo</h1>
   <p>Software Engineer</p>
@@ -24,6 +28,8 @@
     align-items: center;
     border-radius: 9999px;
     justify-content: center;
+    width: 128px;
+    height: 128px;
   }
 
   h1 {

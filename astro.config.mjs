@@ -9,7 +9,7 @@ export default defineConfig({
   site: "https://renansigolo.com",
   integrations: [
     react(),
-    image(),
+    image({ serviceEntryPoint: "@astrojs/image/sharp" }),
     sitemap(),
     compress(),
     partytown({

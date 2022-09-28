@@ -1,6 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  ignorePatterns: ["dist", "scripts", "cypress"],
+  ignorePatterns: ["dist", "scripts", "cypress", "env.d.ts"],
   parserOptions: {
     sourceType: "module",
     ecmaVersion: 2020,
