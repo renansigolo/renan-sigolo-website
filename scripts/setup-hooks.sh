@@ -1,7 +1,7 @@
 # Set commit-msg hook
 echo '#!/bin/sh
 npx --no -- commitlint --edit "$1"' > .git/hooks/commit-msg
-chmod +x .git/hooks/commit-msg
+chmod +x /.git/hooks/commit-msg
 
 # Set pre-commit hook
 echo '#!/bin/sh
@@ -26,5 +26,5 @@ if [ $linter_exit_code -ne 0 ]; then
 else
     echo "✅ Prettier, Eslint and Stylelint did not find any errors"
     exit 0
-fi' >.git/hooks/pre-commit
+fi' > .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
