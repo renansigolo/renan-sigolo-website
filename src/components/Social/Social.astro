@@ -6,15 +6,15 @@ import { socialData } from "./social-data"
 <div class="social">
   <ul data-test="social-media-list">
     {
-      socialData?.map((social) => (
+      socialData?.map(({ icon, title, url }) => (
         <li>
           <a
-            aria-label={social.title}
-            href={social?.url}
+            href={url}
+            aria-label={title}
             rel="noopener noreferrer"
             target="_blank"
           >
-            <FontAwesomeIcon icon={social.icon} />
+            <FontAwesomeIcon icon={icon} />
           </a>
         </li>
       ))
@@ -22,7 +22,7 @@ import { socialData } from "./social-data"
   </ul>
 </div>
 
-<style lang="scss">
+<style>
   .social {
     border-top: 1px solid var(--gray-500);
     display: flex;
@@ -47,17 +47,17 @@ import { socialData } from "./social-data"
     margin-inline: 0.5rem;
     transition: transform 0.2s ease-in-out;
     width: 1rem;
+  }
 
-    &:hover {
-      transform: scale(1.25);
-    }
+  .social ul li:hover {
+    transform: scale(1.25);
   }
 
   .social a {
     color: var(--gray-500);
+  }
 
-    &:hover {
-      color: var(--green-600);
-    }
+  .social a:hover {
+    color: var(--green-600);
   }
 </style>
