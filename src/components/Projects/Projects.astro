@@ -1,0 +1,103 @@
+---
+import { Image } from "@astrojs/image/components"
+import { projectsData } from "./projects-data"
+
+const encodeImage = (imageUrl: string) => {
+  const filename = imageUrl.toLowerCase().replace(/\s+/g, "-").trim()
+  return `src/assets/images/projects/${filename}.webp`
+}
+---
+
+<section data-test="projects-section">
+  <h2>My Projects</h2>
+  <div class="grid">
+    {
+      projectsData.map(({ title, subtitle, url }) => (
+        <a
+          aria-label={subtitle}
+          class="card"
+          href={`https://${url}`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Image
+            class="card-image"
+            src={encodeImage(title)}
+            width="1024"
+            height="640"
+            aspectRatio={"16:10"}
+            alt={`${title} Preview`}
+            format="webp"
+          />
+          <div class="card-overlay">
+            <p class="card-title">
+              <span>{title}</span>
+              <br />
+              {url}
+            </p>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    place-items: center;
+  }
+
+  .card {
+    max-width: fit-content;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card-image {
+    border-radius: 0.25rem;
+    display: flex;
+    height: auto;
+    place-content: center;
+    width: 100%;
+  }
+
+  .card-title {
+    bottom: 0.5rem;
+    color: var(--gray-200);
+    left: 1rem;
+    position: absolute;
+  }
+
+  .card-title span {
+    font-weight: var(--bold);
+  }
+
+  .card-overlay {
+    background-color: var(--bg-gray-900);
+    border-radius: 0.25rem;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .card:hover .card-overlay {
+    display: block;
+  }
+</style>

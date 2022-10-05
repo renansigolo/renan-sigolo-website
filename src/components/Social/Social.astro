@@ -1,0 +1,63 @@
+---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { socialData } from "./social-data"
+---
+
+<div class="social">
+  <ul data-test="social-media-list">
+    {
+      socialData?.map(({ icon, title, url }) => (
+        <li>
+          <a
+            href={url}
+            aria-label={title}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={icon} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .social {
+    border-top: 1px solid var(--gray-500);
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    min-width: 100%;
+    place-content: center;
+  }
+
+  .social ul {
+    display: flex;
+    flex-direction: row;
+    height: 1rem;
+    list-style: none;
+    min-width: 100%;
+    padding: 0;
+    place-content: center;
+  }
+
+  .social ul li {
+    color: var(--gray-500);
+    margin-inline: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+    width: 1rem;
+  }
+
+  .social ul li:hover {
+    transform: scale(1.25);
+  }
+
+  .social a {
+    color: var(--gray-500);
+  }
+
+  .social a:hover {
+    color: var(--green-600);
+  }
+</style>
