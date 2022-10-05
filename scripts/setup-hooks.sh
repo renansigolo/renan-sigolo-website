@@ -9,16 +9,16 @@ echo '#!/bin/sh
 linter_exit_code=1
 all_files=$(git diff --staged --name-only --diff-filter=d)
 js_files=$(git diff --staged --name-only --diff-filter=d | grep .js$)
-style_files=$(git diff --staged --name-only --diff-filter=d | grep .{scss|css|astro}$)
+scss_files=$(git diff --staged --name-only --diff-filter=d | grep .scss$)
 
 ./node_modules/.bin/prettier --ignore-unknown --write $all_files &&
     ./node_modules/.bin/eslint $js_files --quiet --fix &&
-    ./node_modules/.bin/stylelint $style_files --stdin --quiet --fix &&
+    ./node_modules/.bin/stylelint $scss_files --stdin --quiet --fix &&
     ./node_modules/.bin/prettier --check $all_files
 
 linter_exit_code=$?
 
-git add -f $js_files $style_files
+git add -f $js_files $scss_files
 
 if [ $linter_exit_code -ne 0 ]; then
     echo "❌ Linter errors have occurred"
@@ -26,6 +26,5 @@ if [ $linter_exit_code -ne 0 ]; then
 else
     echo "✅ Prettier, Eslint and Stylelint did not find any errors"
     exit 0
-fi
-' >.git/hooks/pre-commit
+fi' >.git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
