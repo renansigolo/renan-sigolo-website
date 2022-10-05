@@ -4,7 +4,7 @@ import { projectsData } from "./projects-data"
 
 const encodeImage = (imageUrl: string) => {
   const filename = imageUrl.toLowerCase().replace(/\s+/g, "")
-  return `/images/projects/${filename}.webp`
+  return `src/assets/images/projects/${filename}.webp`
 }
 ---
 
@@ -62,15 +62,16 @@ const encodeImage = (imageUrl: string) => {
     max-width: fit-content;
     transition: transform 0.2s ease-in-out;
   }
+
   .card:hover {
     transform: scale(1.05);
   }
 
   .card-image {
+    border-radius: 0.25rem;
     display: flex;
     height: auto;
     place-content: center;
-    border-radius: 0.25rem;
     width: 100%;
   }
 
@@ -95,6 +96,7 @@ const encodeImage = (imageUrl: string) => {
     top: 0;
     width: 100%;
   }
+
   .card:hover .card-overlay {
     display: block;
   }
