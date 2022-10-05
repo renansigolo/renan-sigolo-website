@@ -3,7 +3,7 @@ import { Image } from "@astrojs/image/components"
 import { projectsData } from "./projects-data"
 
 const encodeImage = (imageUrl: string) => {
-  const filename = imageUrl.toLowerCase().replace(/\s+/g, "")
+  const filename = imageUrl.toLowerCase().replace(/\s+/g, "-").trim()
   return `src/assets/images/projects/${filename}.webp`
 }
 ---
@@ -12,28 +12,28 @@ const encodeImage = (imageUrl: string) => {
   <h2>My Projects</h2>
   <div class="grid">
     {
-      projectsData.map((item) => (
+      projectsData.map(({ title, subtitle, url }) => (
         <a
-          aria-label={item.subtitle}
+          aria-label={subtitle}
           class="card"
-          href={`https://${item.url}`}
+          href={`https://${url}`}
           rel="noopener noreferrer"
           target="_blank"
         >
           <Image
             class="card-image"
-            src={encodeImage(item.title)}
-            width={1024}
-            height={640}
+            src={encodeImage(title)}
+            width="1024"
+            height="640"
             aspectRatio={"16:10"}
-            alt={`${item.title} Preview`}
+            alt={`${title} Preview`}
             format="webp"
           />
           <div class="card-overlay">
             <p class="card-title">
-              <span>{item.title}</span>
+              <span>{title}</span>
               <br />
-              {item.url}
+              {url}
             </p>
           </div>
         </a>
@@ -42,7 +42,7 @@ const encodeImage = (imageUrl: string) => {
   </div>
 </section>
 
-<style lang="scss">
+<style>
   h2 {
     font-size: 1.875rem;
     font-weight: 500;
