@@ -4,7 +4,7 @@ import { Image } from "@astrojs/image/components"
 
 <section data-test="section-profile">
   <Image
-    src="images/profile.jpeg"
+    src="/images/profile.jpeg"
     width={256}
     height={256}
     alt="Renan Sigolo Profile"
@@ -27,9 +27,9 @@ import { Image } from "@astrojs/image/components"
   img {
     align-items: center;
     border-radius: 9999px;
+    height: 128px;
     justify-content: center;
     width: 128px;
-    height: 128px;
   }
 
   h1 {

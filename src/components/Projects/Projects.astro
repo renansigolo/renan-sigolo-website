@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components"
 import { projectsData } from "./projects-data"
 
 const encodeImage = (imageUrl: string) => {
@@ -7,7 +8,7 @@ const encodeImage = (imageUrl: string) => {
 }
 ---
 
-<section data-test="projects-section">
+<section class="projects" data-test="projects-section">
   <h2 class="heading">My Projects</h2>
   <div class="grid">
     {
@@ -19,13 +20,14 @@ const encodeImage = (imageUrl: string) => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <img
-            alt={`${item.title} Preview`}
+          <Image
             class="card-image"
-            height={225}
-            loading="lazy"
             src={encodeImage(item.title)}
-            width={360}
+            width={1024}
+            height={640}
+            aspectRatio={"16:10"}
+            alt={`${item.title} Preview`}
+            format="webp"
           />
           <div class="card-overlay">
             <p class="card-title">
@@ -40,62 +42,64 @@ const encodeImage = (imageUrl: string) => {
   </div>
 </section>
 
-<style>
-  .heading {
-    font-size: 1.875rem;
-    font-weight: 500;
-    line-height: 2.25rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
+<style lang="scss">
+  .projects {
+    .heading {
+      font-size: 1.875rem;
+      font-weight: 500;
+      line-height: 2.25rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
 
-  .grid {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    place-items: center;
-  }
+    .grid {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+      place-items: center;
+    }
 
-  .card {
-    transition: transform 0.2s ease-in-out;
-    width: auto;
-  }
+    .card {
+      max-width: fit-content;
+      transition: transform 0.2s ease-in-out;
+    }
 
-  .card:hover {
-    transform: scale(1.05);
-  }
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-  .card-image {
-    aspect-ratio: 16 / 10;
-    border-radius: 0.25rem;
-    max-width: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
+    .card-image {
+      border-radius: 0.25rem;
+      display: flex;
+      height: auto;
+      place-content: center;
+      width: 100%;
+    }
 
-  .card-title {
-    bottom: 0.5rem;
-    color: var(--gray-200);
-    left: 1rem;
-    position: absolute;
-  }
+    .card-title {
+      bottom: 0.5rem;
+      color: var(--gray-200);
+      left: 1rem;
+      position: absolute;
+    }
 
-  .card-title span {
-    font-weight: var(--bold);
-  }
+    .card-title span {
+      font-weight: var(--bold);
+    }
 
-  .card-overlay {
-    background-color: var(--bg-gray-900);
-    border-radius: 0.25rem;
-    display: none;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+    .card-overlay {
+      background-color: var(--bg-gray-900);
+      border-radius: 0.25rem;
+      display: none;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
 
-  .card:hover .card-overlay {
-    display: block;
+    .card:hover .card-overlay {
+      display: block;
+    }
   }
 </style>
