@@ -26,9 +26,9 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "postinstall": "scripts/setup-hooks.sh",
     "postversion": "git push && git push --tags",
-    "preview": "astro preview --host",
+    "preview": "npm run build && astro preview --host",
     "start": "astro dev",
-    "test": "npm run build && concurrently -k npm:preview npm:cy:run"
+    "test": "concurrently -k npm:preview npm:cy:run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.2.0",
