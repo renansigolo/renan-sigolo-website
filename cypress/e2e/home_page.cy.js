@@ -24,7 +24,14 @@ describe("The Home Page", () => {
       })
   })
 
-  // it.todo("should show project details on hover");
+  it("should have a valid image for a project card", () => {
+    cy.get("[data-test=projects-section]")
+      .find("img")
+      .each((item, index, list) => {
+        expect(list).to.have.length(9)
+        cy.wrap(item).should("be.visible")
+      })
+  })
 
   it("should have all social media links except linkedin", () => {
     cy.get("[data-test=social-media-list]").children().should("have.length", 5)
