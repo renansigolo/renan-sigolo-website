@@ -22,6 +22,7 @@ pnpm-debug.log*
 
 # Other
 .vercel
+.lighthouseci
 
 # Cypress
 cypress/results/*
