@@ -1,11 +1,11 @@
 # Run Cypress end-to-end tests after Vercel Deploys a new Preview Environment
-name: Cypress
+name: "PR: Check"
 
 on: deployment_status
 
 jobs:
-  run_e2e:
-    name: Run E2E Tests
+  check_e2e:
+    name: Cypress E2E Tests
     if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
     runs-on: ubuntu-latest
     steps:
@@ -16,8 +16,8 @@ jobs:
         env:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
 
-  run_lighthouse:
-    name: Run Lighthouse
+  check_lighthouse:
+    name: Lighthouse
     if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
     runs-on: ubuntu-latest
     steps:
@@ -25,9 +25,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install && npm install -g @lhci/cli@0.9.x
-      - run: npm run build
-      - run: lhci autorun
+      - run: npm install -g @lhci/cli@0.9.x
+      - run: lhci autorun --url ${{ github.event.deployment_status.target_url }}
         env:
-          LHCI_SERVER_BASE_URL: ${{ github.event.deployment_status.target_url }}
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
