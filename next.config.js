@@ -1,9 +1,13 @@
 // You can choose which headers to add to the list
 // after learning more below.
 const ContentSecurityPolicy = `
+  base-uri 'none';
   default-src 'self';
-  style-src 'self' 'unsafe-inline';
-  script-src 'self' 'unsafe-inline';
+  object-src 'none';
+  script-src 'none';
+  script-src-elem 'self' https://*.googletagmanager.com 'unsafe-inline';
+  connect-src https://us-central1-renan-sigolo-website.cloudfunctions.net;
+  require-trusted-types-for 'script';
 `
 const securityHeaders = [
   {
