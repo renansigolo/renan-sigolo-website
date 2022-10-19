@@ -24,6 +24,7 @@ describe("The Home Page", () => {
       })
   })
 
+  // Check is all images are working
   it("should have a valid image for a project card", () => {
     cy.get("[data-test=projects-section]")
       .find("img")
@@ -33,10 +34,9 @@ describe("The Home Page", () => {
       })
   })
 
+  // Check is all links are working
   it("should have all social media links except linkedin", () => {
     cy.get("[data-test=social-media-list]").children().should("have.length", 5)
-
-    // Check is all links are working
     cy.get("[data-test=social-media-list]")
       .find("a")
       .each((item) => {

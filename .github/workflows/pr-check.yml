@@ -1,4 +1,3 @@
-# Run Cypress end-to-end tests after Vercel Deploys a new Preview Environment
 name: "PR: Check"
 
 on: deployment_status
