@@ -6,6 +6,7 @@ module.exports = {
     "cypress",
     "env.d.ts",
     "node_modules",
+    "package-lock.json",
     "package.json"
   ],
   parserOptions: {

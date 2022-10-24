@@ -1,0 +1,30 @@
+name: "PR: Check"
+
+on: deployment_status
+
+jobs:
+  check_e2e:
+    name: Cypress E2E Tests
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Cypress E2E Tests
+        uses: cypress-io/github-action@v4
+        env:
+          CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
+
+  check_lighthouse:
+    name: Lighthouse
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install -g @lhci/cli@0.9.x
+      - run: lhci autorun --collect.url=${{ github.event.deployment_status.target_url }}
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
