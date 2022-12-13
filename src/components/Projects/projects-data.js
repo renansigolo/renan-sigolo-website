@@ -24,11 +24,6 @@ export const projectsData = [
     subtitle: "Canturi Website",
     url: "shop.canturi.com"
   },
-  // {
-  //   title: "TanAndCheek",
-  //   subtitle: "Tan+Cheek Website",
-  //   url: "tanandcheek.com"
-  // },
   {
     title: "Healthy Bones Australia",
     subtitle: "Healthy Bones Australia Website",
@@ -43,6 +38,11 @@ export const projectsData = [
     title: "AE Study",
     subtitle: "Academy of Entrepreneurs Website",
     url: "aestudy.com"
+  },
+  {
+    title: "Specttra",
+    subtitle: "Specttra Website",
+    url: "specttra.com.br"
   },
   {
     title: "LEAD",
