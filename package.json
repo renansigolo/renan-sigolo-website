@@ -52,7 +52,7 @@
     "astro-compress": "1.1.24",
     "autoprefixer": "10.4.13",
     "concurrently": "7.6.0",
-    "cypress": "11.2.0",
+    "cypress": "12.2.0",
     "eslint": "8.30.0",
     "eslint-plugin-astro": "0.21.1",
     "eslint-plugin-jsx-a11y": "6.6.1",

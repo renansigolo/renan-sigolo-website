@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe("The Home Page", () => {
   it("should test profile details", () => {
     cy.visit("/")
