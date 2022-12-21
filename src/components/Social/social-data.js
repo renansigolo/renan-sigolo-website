@@ -1,19 +1,27 @@
-import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook"
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
-import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram"
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+  faTwitter
+} from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 
 export const socialData = [
-  {
-    icon: faTwitter,
-    title: "Twitter",
-    url: "https://twitter.com/renan_sigolo"
-  },
   {
     icon: faGithub,
     title: "GitHub",
     url: "https://github.com/renansigolo"
+  },
+  {
+    icon: faFacebook,
+    title: "Facebook",
+    url: "https://facebook.com/renansigoloferreira"
+  },
+  {
+    icon: faTwitter,
+    title: "Twitter",
+    url: "https://twitter.com/renan_sigolo"
   },
   {
     icon: faLinkedinIn,
@@ -26,8 +34,8 @@ export const socialData = [
     url: "https://instagram.com/renan_sigolo"
   },
   {
-    icon: faFacebook,
-    title: "Facebook",
-    url: "https://facebook.com/renansigoloferreira"
+    icon: faEnvelope,
+    title: "Email",
+    url: "mailto:renan.sigolo@gmail.com?subject=Renan%20Sigolo%20Website%20%7C%20Contact"
   }
 ]
