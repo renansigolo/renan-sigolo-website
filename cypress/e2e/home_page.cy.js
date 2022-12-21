@@ -29,21 +29,26 @@ describe("The Home Page", () => {
     cy.get("[data-test=projects-section]")
       .find("img")
       .each((item, index, list) => {
-        expect(list).to.have.length(9)
+        expect(list).to.have.length(10)
         cy.wrap(item).should("be.visible")
       })
   })
 
   // Check is all links are working
-  it("should have all social media links except linkedin", () => {
-    cy.get("[data-test=social-media-list]").children().should("have.length", 5)
+  it("should have all social media links except linkedin and email", () => {
+    cy.get("[data-test=social-media-list]").children().should("have.length", 6)
     cy.get("[data-test=social-media-list]")
       .find("a")
       .each((item) => {
         // LinkedIn blocks the request therefore this exception is needed
-        if (item.prop("href") !== "https://linkedin.com/in/renansigolo") {
-          cy.request(item.prop("href"))
-        }
+        // Email link doesn't work on cy.request
+        if (
+          item.attr("aria-label") === "LinkedIn" ||
+          item.attr("aria-label") === "Email"
+        )
+          return
+
+        cy.request(item.prop("href"))
       })
   })
 })
