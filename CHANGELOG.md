@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.3.0](https://github.com/renansigolo/renan-sigolo-website/compare/v2.2.1...v2.3.0) (2022-12-27)
+
+
+### Features
+
+* add mail icon to footer ([#203](https://github.com/renansigolo/renan-sigolo-website/issues/203)) ([b89294a](https://github.com/renansigolo/renan-sigolo-website/commit/b89294acf440c50b39e5bd96169493681e970997))
+* add specttra website ([efa1028](https://github.com/renansigolo/renan-sigolo-website/commit/efa10287e3362e0b80cb14312a47a11a63c92212))
+* add tests to images ([#201](https://github.com/renansigolo/renan-sigolo-website/issues/201)) ([d1f9e20](https://github.com/renansigolo/renan-sigolo-website/commit/d1f9e20a6f7e6d351403db9c0ccb28fc06eeca34))
+* adjust manifest ([#205](https://github.com/renansigolo/renan-sigolo-website/issues/205)) ([0f9f538](https://github.com/renansigolo/renan-sigolo-website/commit/0f9f538fe666b86d6d0764b1732107b56e892063))
+* optimizations ([#199](https://github.com/renansigolo/renan-sigolo-website/issues/199)) ([cb3bdeb](https://github.com/renansigolo/renan-sigolo-website/commit/cb3bdeb305c47eca92684aca54c9ee61cd0a4fd7))
+
+
+### Bug Fixes
+
+* auto release ([#194](https://github.com/renansigolo/renan-sigolo-website/issues/194)) ([542fca0](https://github.com/renansigolo/renan-sigolo-website/commit/542fca0cd273290570edc56a2cf570317c00545c))
+* cleanup unused code ([710574b](https://github.com/renansigolo/renan-sigolo-website/commit/710574b70d22ea8147c087524cc0da7b22c3de23))
+* images path ([#200](https://github.com/renansigolo/renan-sigolo-website/issues/200)) ([bfe5478](https://github.com/renansigolo/renan-sigolo-website/commit/bfe5478dae2b79ed8824d2121e38474d21467c6c))
+* release script ([f2e30b4](https://github.com/renansigolo/renan-sigolo-website/commit/f2e30b4e4fe5fc8f831675e0e39f9d344b1f9b47))
+
 ## [2.2.1](https://github.com/renansigolo/renan-sigolo-website/compare/v2.2.0...v2.2.1) (2022-08-31)
 
 
