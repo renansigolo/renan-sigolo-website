@@ -2,8 +2,7 @@
 module.exports = {
   extends: [
     "stylelint-config-recommended-scss",
-    "stylelint-config-sass-guidelines",
-    "stylelint-config-prettier"
+    "stylelint-config-sass-guidelines"
   ],
   defaultSeverity: "error",
   customSyntax: "postcss-html"
