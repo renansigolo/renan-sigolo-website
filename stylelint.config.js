@@ -3,7 +3,6 @@ module.exports = {
   extends: [
     "stylelint-config-recommended-scss",
     "stylelint-config-sass-guidelines"
-    // "stylelint-config-standard"
   ],
   defaultSeverity: "error",
   customSyntax: "postcss-html"
