@@ -6,3 +6,4 @@ Host: https://renansigolo.com
 
 # Sitemaps
 Sitemap: https://renansigolo.com/sitemap-index.xml
+  
