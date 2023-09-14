@@ -16,7 +16,6 @@
     "astro": "astro",
     "build": "astro build",
     "clean": "rm -rf package-lock.json node_modules dist",
-    "compress": "bash scripts/compress-images.sh",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "dev": "astro dev",
