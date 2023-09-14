@@ -1,18 +1,13 @@
 ---
-import { Image } from "@astrojs/image/components"
+import { Image } from "astro:assets"
 import { projectsData } from "./projects-data"
-
-const encodeImage = (imageUrl: string) => {
-  const filename = imageUrl.toLowerCase().replace(/\s+/g, "-").trim()
-  return `/images/projects/${filename}.webp`
-}
 ---
 
 <section data-test="projects-section">
   <h2>My Projects</h2>
   <div class="grid">
     {
-      projectsData.map(({ title, subtitle, url }) => (
+      projectsData.map(({ title, subtitle, url, imageSrc }) => (
         <a
           aria-label={subtitle}
           class="card"
@@ -22,12 +17,11 @@ const encodeImage = (imageUrl: string) => {
         >
           <Image
             class="card-image"
-            src={encodeImage(title)}
+            src={imageSrc}
             width={1024}
             height={640}
-            aspectRatio={"16:10"}
             alt={`${title} Preview`}
-            format="webp"
+            loading="lazy"
           />
           <div class="card-overlay">
             <p class="card-title">
