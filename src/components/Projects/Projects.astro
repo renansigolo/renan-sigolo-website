@@ -1,14 +1,6 @@
 ---
 import { Image } from "astro:assets"
 import { projectsData } from "./projects-data"
-
-// dynamic import images
-
-// const encodeImage = async (imageUrl: string) => {
-//   const filename = imageUrl.toLowerCase().replace(/\s+/g, "-").trim()
-//   console.log("🚀 ~ encodeImage ~ filename:", filename)
-//   // return await import(`./public/images/projects/${filename}.webp`)
-// }
 ---
 
 <section data-test="projects-section">
@@ -29,7 +21,7 @@ import { projectsData } from "./projects-data"
             width={1024}
             height={640}
             alt={`${title} Preview`}
-            format="webp"
+            loading="lazy"
           />
           <div class="card-overlay">
             <p class="card-title">
