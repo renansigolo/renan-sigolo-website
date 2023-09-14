@@ -1,14 +1,15 @@
 ---
 import { Image } from "astro:assets"
+import ProfileImage from "../../assets/images/profile/renan-sigolo.jpeg"
 ---
 
 <section data-test="section-profile">
   <Image
-    src="/images/profile.jpeg"
+    src={ProfileImage}
     alt="Renan Sigolo profile picture"
     width={256}
     height={256}
-    format="webp"
+    loading="eager"
   />
   <h1>Renan Sigolo</h1>
   <p>Software Engineer</p>
