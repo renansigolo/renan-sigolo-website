@@ -3,7 +3,7 @@ import {
   faGithub,
   faInstagram,
   faLinkedinIn,
-  faTwitter
+  faXTwitter
 } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 
@@ -19,14 +19,14 @@ export const socialData = [
     url: "https://facebook.com/renansigoloferreira"
   },
   {
-    icon: faTwitter,
-    title: "Twitter",
-    url: "https://twitter.com/renan_sigolo"
-  },
-  {
     icon: faLinkedinIn,
     title: "LinkedIn",
     url: "https://linkedin.com/in/renansigolo"
+  },
+  {
+    icon: faXTwitter,
+    title: "Twitter",
+    url: "https://twitter.com/renan_sigolo"
   },
   {
     icon: faInstagram,
