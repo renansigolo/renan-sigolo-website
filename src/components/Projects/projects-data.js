@@ -5,11 +5,25 @@ import HealthyKidsImage from "../../assets/images/projects/healthy-kids.webp"
 import LEADImage from "../../assets/images/projects/lead.webp"
 import LiveDesignImage from "../../assets/images/projects/live-design.webp"
 import MyADHDImage from "../../assets/images/projects/my-adhd.webp"
+import RitesOfPassageImage from "../../assets/images/projects/ritesofpassagefestival.png"
 import SpecttraImage from "../../assets/images/projects/specttra.webp"
+import TattooExpoImage from "../../assets/images/projects/tattooexpo.png"
 import TheConstellationProjectImage from "../../assets/images/projects/the-constellation-project.webp"
 import YourRightToKnowImage from "../../assets/images/projects/your-right-to-know.webp"
 
 export const projectsData = [
+  {
+    title: "Tattoo Expo",
+    subtitle: "Tattoo Expo Website",
+    url: "tattooexpo.com.au",
+    imageSrc: TattooExpoImage
+  },
+  {
+    title: "Rites of Passage Festival",
+    subtitle: "Rites of Passage Festival Website",
+    url: "ritesofpassagefestival.com",
+    imageSrc: RitesOfPassageImage
+  },
   {
     title: "My ADHD",
     subtitle: "My ADHD Website and Mobile App",
