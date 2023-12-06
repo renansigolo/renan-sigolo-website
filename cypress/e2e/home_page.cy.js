@@ -29,7 +29,7 @@ describe("The Home Page", () => {
     cy.get("[data-test=projects-section]")
       .find("img")
       .each((item, index, list) => {
-        expect(list).to.have.length(10)
+        expect(list).to.have.length(13)
         cy.wrap(item).should("be.visible")
       })
   })
