@@ -7,7 +7,7 @@ import { projectsData } from "./projects-data"
   <h2>My Projects</h2>
   <div class="grid">
     {
-      projectsData.map(({ title, subtitle, url, imageSrc }) => (
+      projectsData.map(({ title, subtitle, url, imageSrc }, index) => (
         <a
           aria-label={subtitle}
           class="card"
@@ -21,7 +21,7 @@ import { projectsData } from "./projects-data"
             width={1024}
             height={640}
             alt={`${title} Preview`}
-            loading="lazy"
+            loading={index < 2 ? "eager" : "lazy"}
           />
           <div class="card-overlay">
             <p class="card-title">
