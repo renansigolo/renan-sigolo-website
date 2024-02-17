@@ -51,6 +51,12 @@ const { title } = Astro.props
       gtag("js", new Date())
       gtag("config", "G-KZ07JERQ10")
     </script>
+
+    <!-- Vercel Analytics -->
+    <script>
+      import { inject } from "@vercel/analytics"
+      inject()
+    </script>
   </head>
 
   <body>
