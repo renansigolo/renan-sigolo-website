@@ -7,6 +7,7 @@ import LEADImage from "../../assets/images/projects/lead.webp"
 import LiveDesignImage from "../../assets/images/projects/live-design.webp"
 import MyADHDImage from "../../assets/images/projects/my-adhd.webp"
 import RitesOfPassageImage from "../../assets/images/projects/ritesofpassagefestival.png"
+import SexpoImage from "../../assets/images/projects/sexpo.png"
 import SpecttraImage from "../../assets/images/projects/specttra.webp"
 import TattooExpoImage from "../../assets/images/projects/tattooexpo.png"
 import TheConstellationProjectImage from "../../assets/images/projects/the-constellation-project.webp"
@@ -14,8 +15,14 @@ import YourRightToKnowImage from "../../assets/images/projects/your-right-to-kno
 
 export const projectsData = [
   {
-    title: "Tattoo Expo",
-    subtitle: "Tattoo Expo Website",
+    title: "Sexpo",
+    subtitle: "Sexpo Website",
+    url: "sexpo.com.au",
+    imageSrc: SexpoImage
+  },
+  {
+    title: "Australian Tattoo Expo",
+    subtitle: "Australian Tattoo Expo Website",
     url: "tattooexpo.com.au",
     imageSrc: TattooExpoImage
   },
@@ -26,10 +33,16 @@ export const projectsData = [
     imageSrc: RitesOfPassageImage
   },
   {
-    title: "My ADHD",
-    subtitle: "My ADHD Website and Mobile App",
-    url: "myadhd.app",
-    imageSrc: MyADHDImage
+    title: "The Constellation Project",
+    subtitle: "The Constellation Project Website",
+    url: "theconstellationproject.com.au",
+    imageSrc: TheConstellationProjectImage
+  },
+  {
+    title: "Healthy Bones Australia",
+    subtitle: "Healthy Bones Australia Website",
+    url: "healthybonesaustralia.org.au",
+    imageSrc: HealthyBonesAustraliaImage
   },
   {
     title: "Healthy Kids",
@@ -50,22 +63,10 @@ export const projectsData = [
     imageSrc: CanturiImage
   },
   {
-    title: "The Constellation Project",
-    subtitle: "The Constellation Project Website",
-    url: "theconstellationproject.com.au",
-    imageSrc: TheConstellationProjectImage
-  },
-  {
-    title: "CreatorCon",
-    subtitle: "CreatorCon Website",
-    url: "creatorcon.com",
-    imageSrc: CreatorConImage
-  },
-  {
-    title: "Healthy Bones Australia",
-    subtitle: "Healthy Bones Australia Website",
-    url: "healthybonesaustralia.org.au",
-    imageSrc: HealthyBonesAustraliaImage
+    title: "My ADHD",
+    subtitle: "My ADHD Website and Mobile App",
+    url: "myadhd.app",
+    imageSrc: MyADHDImage
   },
   {
     title: "Live Design",
@@ -74,16 +75,22 @@ export const projectsData = [
     imageSrc: LiveDesignImage
   },
   {
-    title: "AE Study",
-    subtitle: "Academy of Entrepreneurs Website",
-    url: "aestudy.com",
-    imageSrc: AEStudyImage
+    title: "CreatorCon",
+    subtitle: "CreatorCon Website",
+    url: "creatorcon.com",
+    imageSrc: CreatorConImage
   },
   {
     title: "Specttra",
     subtitle: "Specttra Website",
     url: "specttra.com.br",
     imageSrc: SpecttraImage
+  },
+  {
+    title: "AE Study",
+    subtitle: "Academy of Entrepreneurs Website",
+    url: "aestudy.com",
+    imageSrc: AEStudyImage
   },
   {
     title: "LEAD",
