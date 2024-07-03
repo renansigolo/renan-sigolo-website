@@ -1,5 +1,5 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Image } from "astro:assets"
 import { socialData } from "./social-data"
 ---
 
@@ -15,7 +15,7 @@ import { socialData } from "./social-data"
             target="_blank"
             title={title}
           >
-            <FontAwesomeIcon icon={icon} />
+            <Image src={icon} alt={title} />
           </a>
         </li>
       ))
@@ -60,5 +60,10 @@ import { socialData } from "./social-data"
 
   .social a:hover {
     color: var(--green-600);
+  }
+
+  .social a img {
+    height: 1.3rem;
+    width: 1.3rem;
   }
 </style>
