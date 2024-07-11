@@ -1,12 +1,12 @@
 ---
-import { Image } from "astro:assets"
+import { Icon } from "astro-icon/components"
 import { socialData } from "./social-data"
 ---
 
 <div class="social">
   <ul data-test="social-media-list">
     {
-      socialData?.map(({ icon, title, url }) => (
+      socialData.map(({ title, url }) => (
         <li>
           <a
             href={url}
@@ -15,7 +15,7 @@ import { socialData } from "./social-data"
             target="_blank"
             title={title}
           >
-            <Image src={icon} alt={title} />
+            <Icon name={title.toLowerCase()} width={24} height={24} />
           </a>
         </li>
       ))
@@ -48,22 +48,19 @@ import { socialData } from "./social-data"
     margin-inline: 0.5rem;
     transition: transform 0.2s ease-in-out;
     width: 1.3rem;
+
+    &:hover {
+      transform: scale(1.25);
+    }
   }
 
-  .social ul li:hover {
-    transform: scale(1.25);
-  }
-
-  .social a {
+  [data-icon] {
     color: var(--gray-500);
-  }
+    fill: var(--gray-500);
 
-  .social a:hover {
-    color: var(--green-600);
-  }
-
-  .social a img {
-    height: 1.3rem;
-    width: 1.3rem;
+    &:hover {
+      color: var(--green-600);
+      fill: var(--green-600);
+    }
   }
 </style>
