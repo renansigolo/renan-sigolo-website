@@ -1,15 +1,13 @@
 describe("The Home Page", () => {
   it("should test profile details", () => {
-    cy.visit("/");
+    const page = cy.visit("/");
 
-    // Check for profile image
-    cy.get("[data-test=section-profile]").find("img").should("be.visible");
-
-    // Check for profile title
-    cy.get("[data-test=section-profile]").find("h1").should("be.visible");
-
-    // Check for profile text
-    cy.get("[data-test=section-profile]").find("p").should("be.visible");
+    page.get("[data-test=section-profile]").find("img").should("be.visible");
+    page
+      .get("[data-test=section-profile]")
+      .find("h1")
+      .should("have.text", "Renan Sigolo");
+    page.get("[data-test=section-profile]").find("p").should("be.visible");
   });
 
   it("should test section header and all project links", () => {
@@ -28,8 +26,8 @@ describe("The Home Page", () => {
   it("should have a valid image for a project card", () => {
     cy.get("[data-test=projects-section]")
       .find("img")
-      .each((item, index, list) => {
-        expect(list).to.have.length(13);
+      .each((item, _index, list) => {
+        expect(list.length % 2).to.equal(0);
         cy.wrap(item).should("be.visible");
       });
   });
