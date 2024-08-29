@@ -8,11 +8,11 @@ module.exports = {
         "lcp-lazy-loaded": "warn",
         "csp-xss": "warn",
         "service-worker": "warn",
-        deprecations: "warn"
-      }
+        deprecations: "warn",
+      },
     },
     upload: {
-      target: "temporary-public-storage"
-    }
-  }
-}
+      target: "temporary-public-storage",
+    },
+  },
+};
