@@ -19,11 +19,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "dev": "astro dev",
-    "fix": "npm run lint:js -- --fix && npm run lint:scss -- --fix",
+    "fix": "npm run lint -- --fix",
     "format": "prettier '**/*' --write --ignore-unknown",
-    "lint:js": "eslint 'src/**/*.{js,astro}'",
-    "lint:scss": "stylelint 'src/**/*.{scss,css,astro}'",
-    "lint": "npm run lint:js && npm run lint:scss",
+    "lint": "eslint 'src/**/*.{js,astro}'",
     "postinstall": "scripts/setup-hooks.sh",
     "postversion": "git push && git push --tags",
     "preview": "npm run build && astro preview --host",
@@ -37,41 +35,21 @@
     "modern-normalize": "3.0.0"
   },
   "devDependencies": {
-    "@astrojs/partytown": "^2.1.2",
+    "@astrojs/partytown": "2.1.2",
     "@astrojs/sitemap": "3.1.6",
     "@commitlint/cli": "19.4.1",
     "@commitlint/config-conventional": "19.4.1",
-    "@commitlint/prompt-cli": "19.4.1",
-    "@typescript-eslint/parser": "8.3.0",
-    "astro": "^4.14.6",
-    "autoprefixer": "10.4.20",
+    "astro": "4.14.6",
     "concurrently": "8.2.2",
     "cypress": "13.14.0",
     "eslint": "9.9.1",
     "eslint-plugin-astro": "1.2.3",
-    "postcss": "8.4.41",
-    "postcss-html": "1.7.0",
     "prettier": "3.3.3",
     "prettier-plugin-astro": "0.14.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "sass": "1.77.8",
-    "sharp": "0.33.5",
-    "stylelint": "16.9.0",
-    "stylelint-config-recommended-scss": "14.1.0",
-    "stylelint-config-sass-guidelines": "11.1.0"
+    "sharp": "0.33.5"
   },
   "engines": {
-    "node": "^18.19.0 || ^20.9.0",
-    "npm": ">=10.2.3"
-  },
-  "browserslist": [
-    "last 1 Chrome version",
-    "last 1 Firefox version",
-    "last 2 Edge major versions",
-    "last 2 Safari major versions",
-    "last 2 iOS major versions",
-    "Firefox ESR",
-    "not IE 11"
-  ]
+    "node": "^20.11.1",
+    "npm": ">=10.2.4"
+  }
 }
