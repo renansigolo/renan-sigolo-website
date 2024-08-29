@@ -1,5 +1,4 @@
 /// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
 
 interface ImportMetaEnv {
   readonly NEXT_PUBLIC_SITE_URL: string;
