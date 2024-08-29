@@ -15,7 +15,7 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
-    "clean": "rm -rf package-lock.json node_modules dist",
+    "clean": "rm -rf .astro dist node_modules package-lock.json",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "dev": "astro dev",
