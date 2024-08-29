@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.5.0](https://github.com/renansigolo/renan-sigolo-website/compare/v2.4.0...v2.5.0) (2024-08-29)
+
+
+### Features
+
+* add creatorcon ([f712164](https://github.com/renansigolo/renan-sigolo-website/commit/f712164e2a1875f0dd6e8714ebfeb53927232186))
+* add sexpo ([49ed160](https://github.com/renansigolo/renan-sigolo-website/commit/49ed160a0e30b2555356707ad33d07c9e023eaba))
+* add tattoo websites ([baa866c](https://github.com/renansigolo/renan-sigolo-website/commit/baa866cf044503c98ccb65362b16c8bb31be4ac5))
+* add vercel analytics ([79afe9b](https://github.com/renansigolo/renan-sigolo-website/commit/79afe9b7adb5c97a4929168e3739c4e33e1543b5))
+
+
+### Bug Fixes
+
+* icons ([d297781](https://github.com/renansigolo/renan-sigolo-website/commit/d297781a050c54a8efc3b0d7dda15bc33b4fbc90))
+* lazy loading ([d7d2329](https://github.com/renansigolo/renan-sigolo-website/commit/d7d232987b742832595f1f441ed269e76ec86825))
+
 ## [2.4.0](https://github.com/renansigolo/renan-sigolo-website/compare/v2.3.0...v2.4.0) (2023-11-29)
 
 
