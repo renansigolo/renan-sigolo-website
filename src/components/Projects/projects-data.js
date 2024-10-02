@@ -5,6 +5,7 @@ import HealthyBonesAustraliaImage from "../../assets/images/projects/healthy-bon
 import HealthyKidsImage from "../../assets/images/projects/healthy-kids.webp";
 import LEADImage from "../../assets/images/projects/lead.webp";
 import LiveDesignImage from "../../assets/images/projects/live-design.webp";
+import MissyLouLouImage from "../../assets/images/projects/missyloulou.png";
 import MyADHDImage from "../../assets/images/projects/my-adhd.webp";
 import RitesOfPassageImage from "../../assets/images/projects/ritesofpassagefestival.png";
 import SexpoImage from "../../assets/images/projects/sexpo.png";
@@ -15,10 +16,10 @@ import YourRightToKnowImage from "../../assets/images/projects/your-right-to-kno
 
 export const projectsData = [
   {
-    title: "Sexpo",
-    subtitle: "Sexpo Website",
-    url: "sexpo.com.au",
-    imageSrc: SexpoImage,
+    title: "Missy Lou Lou",
+    subtitle: "Missy Lou Lou Website",
+    url: "missyloulou.com",
+    imageSrc: MissyLouLouImage,
   },
   {
     title: "Australian Tattoo Expo",
@@ -33,6 +34,12 @@ export const projectsData = [
     imageSrc: RitesOfPassageImage,
   },
   {
+    title: "Sexpo",
+    subtitle: "Sexpo Website",
+    url: "sexpo.com.au",
+    imageSrc: SexpoImage,
+  },
+  {
     title: "The Constellation Project",
     subtitle: "The Constellation Project Website",
     url: "theconstellationproject.com.au",
@@ -45,16 +52,16 @@ export const projectsData = [
     imageSrc: HealthyBonesAustraliaImage,
   },
   {
-    title: "Healthy Kids",
-    subtitle: "Healthy Kids Website",
-    url: "healthykids.nsw.gov.au",
-    imageSrc: HealthyKidsImage,
-  },
-  {
     title: "Your Right To Know",
     subtitle: "Your Right To Know Website",
     url: "yourrighttoknow.com.au",
     imageSrc: YourRightToKnowImage,
+  },
+  {
+    title: "Healthy Kids",
+    subtitle: "Healthy Kids Website",
+    url: "healthykids.nsw.gov.au",
+    imageSrc: HealthyKidsImage,
   },
   {
     title: "Canturi",
