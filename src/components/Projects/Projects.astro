@@ -16,12 +16,12 @@ import { projectsData } from "./projects-data";
           target="_blank"
         >
           <Image
+            alt={`${title} Preview`}
             class="card-image"
+            height={640}
+            loading={index < 4 ? "eager" : "lazy"}
             src={imageSrc}
             width={1024}
-            height={640}
-            alt={`${title} Preview`}
-            loading={index < 4 ? "eager" : "lazy"}
           />
           <div class="card-overlay">
             <p class="card-title">

@@ -8,40 +8,40 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={title} />
-    <meta name="theme-color" content="#1f2937" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content={title} name="description" />
+    <meta content="#1f2937" name="theme-color" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="default" name="apple-mobile-web-app-status-bar-style" />
 
     <!-- Twitter -->
     <meta
-      property="og:image"
       content="https://renansigolo.com/meta-tags-banner.svg"
+      property="og:image"
     />
-    <meta name="og:title" content={title} />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta content={title} name="og:title" />
+    <meta content="summary_large_image" name="twitter:card" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="icon" href="favicon.ico" />
+    <link href="favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="favicon.ico" rel="icon" />
 
     <!-- Apple -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Manifest -->
-    <link rel="manifest" href="site.webmanifest" />
+    <link href="site.webmanifest" rel="manifest" />
 
     <!-- Sitemap -->
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link href="/sitemap-index.xml" rel="sitemap" />
 
     <!-- Title -->
     <title>{title}</title>
 
     <!-- Google Analytics -->
     <script
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=G-KZ07JERQ10"></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-KZ07JERQ10"
+      type="text/partytown"></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {

@@ -9,13 +9,13 @@ import { socialData } from "./social-data";
       socialData.map(({ title, url }) => (
         <li>
           <a
-            href={url}
             aria-label={title}
+            href={url}
             rel="noopener noreferrer"
             target="_blank"
             title={title}
           >
-            <Icon name={title.toLowerCase()} width={24} height={24} />
+            <Icon height={24} name={title.toLowerCase()} width={24} />
           </a>
         </li>
       ))

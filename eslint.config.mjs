@@ -13,4 +13,12 @@ export default [
     ],
   },
   ...eslintPluginAstro.configs.recommended,
+  {
+    rules: {
+      "astro/sort-attributes": [
+        "warn",
+        { type: "alphabetical", order: "asc", ignoreCase: true },
+      ],
+    },
+  },
 ];
