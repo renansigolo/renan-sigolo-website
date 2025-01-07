@@ -10,6 +10,16 @@ describe("The Home Page", () => {
     page.get("[data-test=section-profile]").find("p").should("be.visible");
   });
 
+  // Check is all images are working
+  it("should have a valid image for a project card", () => {
+    cy.get("[data-test=projects-section]")
+      .find("img")
+      .each((item, _index, list) => {
+        expect(list.length % 2).to.equal(0);
+        cy.wrap(item).should("be.visible");
+      });
+  });
+
   it("should test section header and all project links", () => {
     // Check for a valid header
     cy.get("[data-test=projects-section]").find("h2").should("be.visible");
@@ -19,16 +29,6 @@ describe("The Home Page", () => {
       .find("a")
       .each((item) => {
         cy.request(item.prop("href"));
-      });
-  });
-
-  // Check is all images are working
-  it("should have a valid image for a project card", () => {
-    cy.get("[data-test=projects-section]")
-      .find("img")
-      .each((item, _index, list) => {
-        expect(list.length % 2).to.equal(0);
-        cy.wrap(item).should("be.visible");
       });
   });
 

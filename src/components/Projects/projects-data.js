@@ -1,6 +1,5 @@
 import AEStudyImage from "../../assets/images/projects/ae-study.webp";
 import CanturiImage from "../../assets/images/projects/canturi.png";
-import CreatorConImage from "../../assets/images/projects/creatorcon.png";
 import HealthyBonesAustraliaImage from "../../assets/images/projects/healthy-bones-australia.webp";
 import HealthyKidsImage from "../../assets/images/projects/healthy-kids.webp";
 import LEADImage from "../../assets/images/projects/lead.webp";
@@ -81,12 +80,12 @@ export const projectsData = [
     url: "livedesign.com.br",
     imageSrc: LiveDesignImage,
   },
-  {
-    title: "CreatorCon",
-    subtitle: "CreatorCon Website",
-    url: "creatorcon.com",
-    imageSrc: CreatorConImage,
-  },
+  // {
+  //   title: "CreatorCon",
+  //   subtitle: "CreatorCon Website",
+  //   url: "creatorcon.com",
+  //   imageSrc: CreatorConImage,
+  // },
   {
     title: "Specttra",
     subtitle: "Specttra Website",
