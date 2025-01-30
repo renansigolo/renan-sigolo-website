@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/renansigolo/renan-sigolo-website/compare/v2.5.0...v2.6.0) (2025-01-30)
+
+
+### Features
+
+* add missy lou lou ([3eff1c0](https://github.com/renansigolo/renan-sigolo-website/commit/3eff1c0fa92ae464c710b9c5eaae19b3c30710a5))
+
 ## [2.5.0](https://github.com/renansigolo/renan-sigolo-website/compare/v2.4.0...v2.5.0) (2024-08-29)
 
 
