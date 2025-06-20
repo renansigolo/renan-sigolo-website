@@ -40,7 +40,7 @@
     "@astrojs/sitemap": "3.4.1",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
-    "astro": "5.9.3",
+    "astro": "5.10.0",
     "concurrently": "9.1.2",
     "cypress": "14.4.0",
     "eslint": "9.27.0",
