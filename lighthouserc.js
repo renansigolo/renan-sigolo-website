@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   ci: {
     assert: {
       preset: "lighthouse:recommended",
@@ -16,3 +16,5 @@ module.exports = {
     },
   },
 };
+
+export default config;

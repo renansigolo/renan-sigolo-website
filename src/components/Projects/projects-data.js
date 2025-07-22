@@ -7,9 +7,7 @@ import LiveDesignImage from "../../assets/images/projects/live-design.webp";
 import MissyLouLouImage from "../../assets/images/projects/missyloulou.png";
 import MyADHDImage from "../../assets/images/projects/my-adhd.webp";
 import RitesOfPassageImage from "../../assets/images/projects/ritesofpassagefestival.png";
-import SexpoImage from "../../assets/images/projects/sexpo.png";
-import SpecttraImage from "../../assets/images/projects/specttra.webp";
-import TattooExpoImage from "../../assets/images/projects/tattooexpo.png";
+import SxpoImage from "../../assets/images/projects/sxpo.png";
 import TheConstellationProjectImage from "../../assets/images/projects/the-constellation-project.webp";
 import YourRightToKnowImage from "../../assets/images/projects/your-right-to-know.webp";
 
@@ -20,23 +18,23 @@ export const projectsData = [
     url: "missyloulou.com",
     imageSrc: MissyLouLouImage,
   },
+  // {
+  //   title: "Australian Tattoo Expo",
+  //   subtitle: "Australian Tattoo Expo Website",
+  //   url: "tattooexpo.com.au",
+  //   imageSrc: TattooExpoImage,
+  // },
   {
-    title: "Australian Tattoo Expo",
-    subtitle: "Australian Tattoo Expo Website",
-    url: "tattooexpo.com.au",
-    imageSrc: TattooExpoImage,
+    title: "Sxpo",
+    subtitle: "Sxpo Website",
+    url: "sxpo.au",
+    imageSrc: SxpoImage,
   },
   {
     title: "Rites of Passage Festival",
     subtitle: "Rites of Passage Festival Website",
     url: "ritesofpassagefestival.com",
     imageSrc: RitesOfPassageImage,
-  },
-  {
-    title: "Sexpo",
-    subtitle: "Sexpo Website",
-    url: "sexpo.com.au",
-    imageSrc: SexpoImage,
   },
   {
     title: "The Constellation Project",
@@ -86,12 +84,12 @@ export const projectsData = [
   //   url: "creatorcon.com",
   //   imageSrc: CreatorConImage,
   // },
-  {
-    title: "Specttra",
-    subtitle: "Specttra Website",
-    url: "specttra.com.br",
-    imageSrc: SpecttraImage,
-  },
+  // {
+  //   title: "Specttra",
+  //   subtitle: "Specttra Website",
+  //   url: "specttra.com.br",
+  //   imageSrc: SpecttraImage,
+  // },
   {
     title: "AE Study",
     subtitle: "Academy of Entrepreneurs Website",

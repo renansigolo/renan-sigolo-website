@@ -37,7 +37,7 @@ const securityHeaders = [
   },
 ];
 
-module.exports = {
+const config = {
   async headers() {
     return [
       {
@@ -48,3 +48,5 @@ module.exports = {
     ];
   },
 };
+
+export default config;

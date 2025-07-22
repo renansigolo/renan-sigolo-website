@@ -40,9 +40,10 @@ const { title } = Astro.props;
 
     <!-- Google Analytics -->
     <script
+      is:inline
       src="https://www.googletagmanager.com/gtag/js?id=G-KZ07JERQ10"
       type="text/partytown"></script>
-    <script type="text/partytown">
+    <script is:inline type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);

@@ -1,6 +1,6 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
+const config = defineConfig({
   video: false,
   e2e: {
     testIsolation: false,
@@ -8,3 +8,5 @@ module.exports = defineConfig({
     baseUrl: "http://localhost:4321",
   },
 });
+
+export default config;
