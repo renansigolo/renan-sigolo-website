@@ -8,7 +8,7 @@ jobs:
     if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Run Cypress E2E Tests
         uses: cypress-io/github-action@v6
@@ -20,11 +20,11 @@ jobs:
     if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18
-      - run: npm install -g @lhci/cli@0.14.x
+          node-version: 22
+      - run: npm install -g @lhci/cli@0.15.x
       - run: lhci autorun --collect.url=${{ github.event.deployment_status.target_url }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
