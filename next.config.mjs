@@ -35,6 +35,10 @@ const securityHeaders = [
     key: "X-DNS-Prefetch-Control",
     value: "on",
   },
+  {
+    key: "Access-Control-Allow-Origin",
+    value: "*",
+  },
 ];
 
 const config = {
@@ -43,7 +47,7 @@ const config = {
       {
         // Apply these headers to all routes in your application.
         source: "/:path*",
-        // headers: securityHeaders,
+        headers: securityHeaders,
       },
     ];
   },
