@@ -10,3 +10,21 @@
 <button id="eventbrite-widget-modal-trigger-1482662566649" type="button"
   >Buy Tickets</button
 >
+
+<script src="https://www.eventbrite.com.au/static/widgets/eb_widgets.js"
+></script>
+
+<script type="text/javascript">
+  var exampleCallback = function () {
+    console.log("Order complete!");
+  };
+
+  window.EBWidgets.createWidget({
+    widgetType: "checkout",
+    eventId: "1482662566649",
+    // You can replace the discount code with an access or promotion code to override it
+    modal: true,
+    modalTriggerElementId: "eventbrite-widget-modal-trigger-1482662566649",
+    onOrderComplete: exampleCallback,
+  });
+</script>
