@@ -1,13 +1,13 @@
 import AEStudyImage from "../../assets/images/projects/ae-study.webp";
-import CanturiImage from "../../assets/images/projects/canturi.png";
+import CanturiImage from "../../assets/images/projects/canturi.jpg";
 import HealthyBonesAustraliaImage from "../../assets/images/projects/healthy-bones-australia.webp";
 import HealthyKidsImage from "../../assets/images/projects/healthy-kids.webp";
 import LEADImage from "../../assets/images/projects/lead.webp";
 import LiveDesignImage from "../../assets/images/projects/live-design.webp";
-import MissyLouLouImage from "../../assets/images/projects/missyloulou.png";
+import MissyLouLouImage from "../../assets/images/projects/missyloulou.jpg";
 import MyADHDImage from "../../assets/images/projects/my-adhd.webp";
-import RitesOfPassageImage from "../../assets/images/projects/ritesofpassagefestival.png";
-import SxpoImage from "../../assets/images/projects/sxpo.png";
+import RabbitohsInstituteImage from "../../assets/images/projects/rabbitohsinstitute.jpg";
+import SXhibitionImage from "../../assets/images/projects/sxhibition.jpg";
 import TheConstellationProjectImage from "../../assets/images/projects/the-constellation-project.webp";
 import YourRightToKnowImage from "../../assets/images/projects/your-right-to-know.webp";
 
@@ -18,24 +18,30 @@ export const projectsData = [
     url: "missyloulou.com",
     imageSrc: MissyLouLouImage,
   },
+  {
+    title: "SXhibition",
+    subtitle: "SXhibition Website",
+    url: "sxhibition.com",
+    imageSrc: SXhibitionImage,
+  },
+  {
+    title: "Rabbitohs Institute",
+    subtitle: "Rabbitohs Institute Website",
+    url: "rabbitohsinstitute.com.au",
+    imageSrc: RabbitohsInstituteImage,
+  },
   // {
   //   title: "Australian Tattoo Expo",
   //   subtitle: "Australian Tattoo Expo Website",
   //   url: "tattooexpo.com.au",
   //   imageSrc: TattooExpoImage,
   // },
-  {
-    title: "Sxpo",
-    subtitle: "Sxpo Website",
-    url: "sxpo.au",
-    imageSrc: SxpoImage,
-  },
-  {
-    title: "Rites of Passage Festival",
-    subtitle: "Rites of Passage Festival Website",
-    url: "ritesofpassagefestival.com",
-    imageSrc: RitesOfPassageImage,
-  },
+  // {
+  //   title: "Rites of Passage Festival",
+  //   subtitle: "Rites of Passage Festival Website",
+  //   url: "ritesofpassagefestival.com",
+  //   imageSrc: RitesOfPassageImage,
+  // },
   {
     title: "The Constellation Project",
     subtitle: "The Constellation Project Website",
