@@ -16,8 +16,6 @@
     "astro": "astro",
     "build": "astro check && astro build",
     "clean": "rm -rf .astro dist node_modules package-lock.json",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
     "dev": "astro dev",
     "fix": "npm run lint -- --fix",
     "format": "prettier '**/*' --write --ignore-unknown",
@@ -26,8 +24,7 @@
     "postversion": "git push && git push --tags",
     "preview": "npm run build && astro preview --host",
     "start": "astro dev",
-    "test:watch": "concurrently -k npm:dev npm:cy:open",
-    "test": "concurrently -k npm:preview npm:cy:run"
+    "test": "playwright test"
   },
   "dependencies": {
     "@astrojs/partytown": "2.1.5",
@@ -40,10 +37,9 @@
     "@astrojs/sitemap": "3.7.1",
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
-    "astro": "6.0.5",
-    "concurrently": "9.2.1",
-    "cypress": "15.12.0",
-    "eslint": "10.0.3",
+    "@playwright/test": "^1.58.2",
+    "astro": "6.0.8",
+    "eslint": "10.1.0",
     "eslint-plugin-astro": "1.6.0",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
