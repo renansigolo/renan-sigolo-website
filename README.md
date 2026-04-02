@@ -36,3 +36,11 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## Image Optimization
+
+Use the webp cli to optimize the images in the `src/assets/images/projects` folder. You can run the following command for each image:
+
+```bash
+cwebp -resize 1024 640 input_file.jpg -o output_file.webp
+```
