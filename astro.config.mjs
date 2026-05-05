@@ -6,6 +6,9 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://renansigolo.com",
+  security: {
+    csp: true,
+  },
   integrations: [
     sitemap(),
     partytown({
