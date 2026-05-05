@@ -32,23 +32,23 @@
   "dependencies": {
     "@astrojs/partytown": "2.1.7",
     "@vercel/analytics": "2.0.0",
+    "astro": "6.2.2",
     "astro-icon": "1.1.5",
     "modern-normalize": "3.0.1"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.8",
+    "@astrojs/check": "0.9.9",
     "@astrojs/sitemap": "3.7.2",
-    "@commitlint/cli": "20.5.0",
-    "@commitlint/config-conventional": "20.5.0",
-    "astro": "6.1.6",
+    "@commitlint/cli": "20.5.3",
+    "@commitlint/config-conventional": "20.5.3",
     "concurrently": "9.2.1",
-    "cypress": "15.13.1",
-    "eslint": "10.2.0",
+    "cypress": "15.14.2",
+    "eslint": "10.3.0",
     "eslint-plugin-astro": "1.7.0",
     "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.34.5",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "engines": {
     "node": "^24.11.0",
