@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.6.0](https://github.com/renansigolo/renan-sigolo-website/compare/v2.5.0...v2.6.0) (2026-09-30)
+
+
+### Features
+
+* add background to images ([907ee2d](https://github.com/renansigolo/renan-sigolo-website/commit/907ee2d841ebbe886ec236849489ac062efa85b9))
+* add eventbrite ([5a7e46c](https://github.com/renansigolo/renan-sigolo-website/commit/5a7e46cf51b26191cb59583e4fae710355f5b43b))
+* add missy lou lou ([3eff1c0](https://github.com/renansigolo/renan-sigolo-website/commit/3eff1c0fa92ae464c710b9c5eaae19b3c30710a5))
+* add sxhibition ([d830286](https://github.com/renansigolo/renan-sigolo-website/commit/d8302860e65e0ac9d4dbc5b3d11cee27b1ca41ff))
+
+
+### Bug Fixes
+
+* dependencies ([16100e9](https://github.com/renansigolo/renan-sigolo-website/commit/16100e90491fd6cc63202a71ac45f4b6e2d175d6))
+* dependencies ([6a491cb](https://github.com/renansigolo/renan-sigolo-website/commit/6a491cb2de98d4d5788cc104e48fc0ea0759c9c6))
+* eventbrite widget ([378c515](https://github.com/renansigolo/renan-sigolo-website/commit/378c515c24149b5d2bc299d4726777d09b05e0ff))
+* extensions ([9b0f7e7](https://github.com/renansigolo/renan-sigolo-website/commit/9b0f7e7fed9a38589d1d34456b887a59395ff608))
+* try again ([3f2a2e3](https://github.com/renansigolo/renan-sigolo-website/commit/3f2a2e31513b65465730676cf44fd8e845dc7c46))
+
+
+### Performance Improvements
+
+* reduce projects image sizes ([64bda62](https://github.com/renansigolo/renan-sigolo-website/commit/64bda622ca5c49c97f47158fa355a46ac02e486e))
+* use avif images ([df15b1a](https://github.com/renansigolo/renan-sigolo-website/commit/df15b1a0a3677db2281888c9ea653171c5bdedb0))
+
 ## [2.5.0](https://github.com/renansigolo/renan-sigolo-website/compare/v2.4.0...v2.5.0) (2024-08-29)
 
 
