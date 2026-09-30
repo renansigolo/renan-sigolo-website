@@ -6,34 +6,32 @@ import { projectsData } from "./projects-data";
 <section data-test="projects-section">
   <h2>My Projects</h2>
   <div class="grid">
-    {
-      projectsData.map(({ title, subtitle, url, imageSrc }, index) => (
-        <a
-          aria-label={subtitle}
-          class="card"
-          href={`https://${url}`}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Image
-            alt={`${title} Preview`}
-            class="card-image"
-            format="avif"
-            height={640}
-            loading={index < 4 ? "eager" : "lazy"}
-            src={imageSrc}
-            width={1024}
-          />
-          <div class="card-overlay">
-            <p class="card-title">
-              <span>{title}</span>
-              <br />
-              {url}
-            </p>
-          </div>
-        </a>
-      ))
-    }
+    {projectsData.map(({ title, subtitle, url, imageSrc }, index) => (
+      <a
+        aria-label={subtitle}
+        class="card"
+        href={`https://${url}`}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <Image
+          alt={`${title} Preview`}
+          class="card-image"
+          format="avif"
+          height={640}
+          loading={index < 4 ? "eager" : "lazy"}
+          src={imageSrc}
+          width={1024}
+        />
+        <div class="card-overlay">
+          <p class="card-title">
+            <span>{title}</span>
+            <br />
+            {url}
+          </p>
+        </div>
+      </a>
+    ))}
   </div>
 </section>
 

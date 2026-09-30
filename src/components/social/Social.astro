@@ -5,21 +5,19 @@ import { socialData } from "./social-data";
 
 <div class="social">
   <ul data-test="social-media-list">
-    {
-      socialData.map(({ title, url }) => (
-        <li>
-          <a
-            aria-label={title}
-            href={url}
-            rel="noopener noreferrer"
-            target="_blank"
-            title={title}
-          >
-            <Icon height={24} name={title.toLowerCase()} width={24} />
-          </a>
-        </li>
-      ))
-    }
+    {socialData.map(({ title, url }) => (
+      <li>
+        <a
+          aria-label={title}
+          href={url}
+          rel="noopener noreferrer"
+          target="_blank"
+          title={title}
+        >
+          <Icon height={24} name={title.toLowerCase()} width={24} />
+        </a>
+      </li>
+    ))}
   </ul>
 </div>
 

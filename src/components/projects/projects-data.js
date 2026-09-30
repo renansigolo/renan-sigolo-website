@@ -7,22 +7,23 @@ import LiveDesignImage from "../../assets/images/projects/live-design.webp";
 import MissyLouLouImage from "../../assets/images/projects/missyloulou.webp";
 import MyADHDImage from "../../assets/images/projects/my-adhd.webp";
 import RabbitohsInstituteImage from "../../assets/images/projects/rabbitohsinstitute.webp";
+import SXhibitionImage from "../../assets/images/projects/sxhibition.webp";
 import TheConstellationProjectImage from "../../assets/images/projects/the-constellation-project.webp";
 import YourRightToKnowImage from "../../assets/images/projects/your-right-to-know.webp";
 
 export const projectsData = [
+  {
+    title: "SXhibition",
+    subtitle: "SXhibition Website",
+    url: "sxhibition.com",
+    imageSrc: SXhibitionImage,
+  },
   {
     title: "Missy Lou Lou",
     subtitle: "Missy Lou Lou Website",
     url: "missyloulou.com",
     imageSrc: MissyLouLouImage,
   },
-  // {
-  //   title: "SXhibition",
-  //   subtitle: "SXhibition Website",
-  //   url: "sxhibition.com",
-  //   imageSrc: SXhibitionImage,
-  // },
   {
     title: "Rabbitohs Institute",
     subtitle: "Rabbitohs Institute Website",

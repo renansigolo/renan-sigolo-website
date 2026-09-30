@@ -30,24 +30,24 @@
     "test": "concurrently -k npm:preview npm:cy:run"
   },
   "dependencies": {
-    "@astrojs/partytown": "2.1.7",
+    "@astrojs/partytown": "2.1.8",
     "@vercel/analytics": "2.0.1",
-    "astro": "7.3.2",
+    "astro": "7.3.5",
     "astro-icon": "1.2.0",
     "modern-normalize": "3.0.1"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
     "@astrojs/sitemap": "3.7.4",
-    "@commitlint/cli": "21.2.2",
-    "@commitlint/config-conventional": "21.2.2",
+    "@commitlint/cli": "21.2.3",
+    "@commitlint/config-conventional": "21.2.3",
     "concurrently": "10.0.5",
-    "cypress": "16.0.0",
-    "eslint": "10.10.0",
-    "eslint-plugin-astro": "3.1.0",
-    "prettier": "3.9.6",
-    "prettier-plugin-astro": "1.0.0",
-    "sharp": "0.35.4",
+    "cypress": "16.1.1",
+    "eslint": "10.11.0",
+    "eslint-plugin-astro": "3.2.1",
+    "prettier": "3.9.9",
+    "prettier-plugin-astro": "1.1.0",
+    "sharp": "0.35.5",
     "typescript": "6.0.3"
   },
   "engines": {
