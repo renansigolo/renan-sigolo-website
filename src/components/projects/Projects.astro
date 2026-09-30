@@ -19,7 +19,9 @@ import { projectsData } from "./projects-data";
           class="card-image"
           format="avif"
           height={640}
-          loading={index < 4 ? "eager" : "lazy"}
+          layout="constrained"
+          priority={index < 2}
+          sizes="(min-width: 768px) 360px, (min-width: 648px) calc(50vw - 24px), calc(100vw - 32px)"
           src={imageSrc}
           width={1024}
         />
@@ -48,11 +50,9 @@ import { projectsData } from "./projects-data";
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    place-items: center;
   }
 
   .card {
-    max-width: fit-content;
     transition: transform 0.2s ease-in-out;
   }
 
@@ -61,10 +61,11 @@ import { projectsData } from "./projects-data";
   }
 
   .card-image {
+    aspect-ratio: 1024 / 640;
+    background-color: var(--bg-gray-900);
     border-radius: 0.25rem;
-    display: flex;
+    display: block;
     height: auto;
-    place-content: center;
     width: 100%;
   }
 

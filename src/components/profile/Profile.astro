@@ -7,10 +7,11 @@ import ProfileImage from "../../assets/images/profile/renan-sigolo.jpeg";
   <Image
     alt="Renan Sigolo profile"
     format="avif"
-    height={256}
-    loading="eager"
+    height={128}
+    layout="fixed"
+    priority
     src={ProfileImage}
-    width={256}
+    width={128}
   />
   <h1>Renan Sigolo</h1>
   <p>Software Engineer</p>
@@ -27,10 +28,9 @@ import ProfileImage from "../../assets/images/profile/renan-sigolo.jpeg";
   }
 
   img {
-    align-items: center;
+    background-color: var(--bg-gray-900);
     border-radius: 9999px;
     height: 128px;
-    justify-content: center;
     width: 128px;
   }
 
